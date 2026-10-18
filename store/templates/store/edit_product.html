@@ -1,0 +1,207 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+
+<style>
+  body { background: #fdf6f0; }
+  
+  .edit-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .form-header {
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .form-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .form-body {
+    padding: 30px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4b2e2e;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .form-control:focus {
+    outline: none;
+    border-color: #f39c12;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+  }
+
+  .form-control-file {
+    padding: 8px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    background: #f8f9fa;
+  }
+
+  .current-image {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 10px 0;
+    background: #f8f9fa;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .save-btn {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .save-btn:hover {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  .btn-save {
+    background: linear-gradient(45deg, #2e8b57, #3cb371);
+  }
+
+  .btn-cancel {
+    background: linear-gradient(45deg, #8B0000, #A52A2A);
+    margin-left: 10px;
+  }
+
+  .btn-edit {
+    background: linear-gradient(45deg, #D2691E, #CD853F);
+    margin-right: 8px;
+  }
+
+  .btn-delete {
+    background: linear-gradient(45deg, #8B0000, #B22222);
+  }
+
+  @media (max-width: 768px) {
+    .form-body {
+      padding: 20px;
+    }
+    
+    .button-group {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="container">
+  <a href="{% url 'product_detail' chocolate.pk %}" class="back-btn">
+    ← Back to Product
+  </a>
+
+  <div class="edit-form-container">
+    <div class="form-header">
+      <h1>✏️ Edit Product</h1>
+    </div>
+    
+    <div class="form-body">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <div class="form-group">
+          <label for="name">Product Name:</label>
+          <input type="text" id="name" name="name" class="form-control" value="{{ chocolate.name }}" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" class="form-control" rows="4" required>{{ chocolate.description }}</textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="price">Price (₹):</label>
+          <input type="number" id="price" name="price" class="form-control" value="{{ chocolate.price }}" step="0.01" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <select id="category" name="category" class="form-control" required>
+            {% for category in categories %}
+              <option value="{{ category.id }}" {% if category.id == chocolate.category.id %}selected{% endif %}>
+                {{ category.name }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="image">Product Image:</label>
+          <input type="file" id="image" name="image" class="form-control form-control-file" accept="image/*">
+          <p><small>Leave empty to keep current image</small></p>
+          {% if chocolate.image %}
+            <p><strong>Current Image:</strong></p>
+            <img src="{{ chocolate.image.url }}" alt="{{ chocolate.name }}" class="current-image">
+          {% endif %}
+        </div>
+        
+        <div class="form-actions mt-4">
+          <button type="submit" class="btn btn-save">
+            <i class="fas fa-save me-2"></i>Save Changes
+          </button>
+          <a href="{% url 'product_detail' chocolate.pk %}" class="btn btn-cancel">
+            <i class="fas fa-times me-2"></i>Cancel
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

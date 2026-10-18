@@ -1,0 +1,98 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="container">
+  <style>
+    /* Site-themed accents (warm orange) */
+    .accent { color: #d97b1a; }
+    .accent-hover:hover { color: #b86112; }
+    .badge-site { background-color: #d97b1a; color: #fff; }
+    /* Plain text buttons without background/borders */
+    .btn-plain { background: transparent !important; border: none !important; color: #d97b1a !important; padding: 0 !important; font-weight: 600; box-shadow: none !important; }
+    .btn-plain:hover, .btn-plain:focus { text-decoration: underline; color: #b86112 !important; box-shadow: none !important; }
+  </style>
+  <div class="row justify-content-center">
+    <div class="{% if user.is_staff %}col-lg-8{% else %}col-lg-8 col-md-10 col-12{% endif %}">
+      <div class="card shadow-sm mb-4" style="border-radius: 16px; overflow: hidden;">
+        <div class="card-header text-center" style="background: linear-gradient(45deg, #8e44ad, #9b59b6); color: white;">
+          <h5 class="mb-0">🔔 Your Notifications</h5>
+        </div>
+        <div class="card-body p-0">
+          {% if notifications %}
+            <ul class="list-group list-group-flush">
+              {% for n in notifications %}
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                    <div>
+                      <div class="fw-semibold">{{ n.message }}</div>
+                      <div class="text-muted small">{{ n.created_at|date:"M d, Y H:i" }}</div>
+                      {% if n.return_request %}
+                        <div class="mt-1 text-muted small">
+                          Return Request #{{ n.return_request.id }} • Order {{ n.return_request.order.invoice_number }} • Status: {{ n.return_request.status|title }}
+                        </div>
+                        {% if n.return_request.reason %}
+                          <div class="mt-1"><span class="badge badge-site" style="font-size: 1rem;">Reason: {{ n.return_request.get_reason_display }}</span></div>
+                        {% endif %}
+                        {% if n.return_request.reason == 'other' and n.return_request.reason_other %}
+                          <div class="text-muted small mt-1">{{ n.return_request.reason_other }}</div>
+                        {% endif %}
+                      {% endif %}
+                    </div>
+                    <div class="d-flex align-items-center gap-2 ms-auto">
+                      {% if not n.is_read %}
+                        <span class="badge bg-danger">New</span>
+                      {% endif %}
+                      {% if user.is_staff and n.return_request and n.return_request.status == 'pending' %}
+                        <a href="{% url 'approve_return' n.return_request.id %}" class="btn-plain">Approve</a>
+                        <a href="{% url 'decline_return' n.return_request.id %}" class="btn-plain">Decline</a>
+                      {% else %}
+                        <a href="{% url 'delete_notification' n.id %}" class="btn-plain">Delete</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <div class="p-4 text-center text-muted">No notifications</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if user.is_staff %}
+    <div class="col-lg-4">
+      <div class="card shadow-sm" style="border-radius: 16px; overflow: hidden;">
+        <div class="card-header" style="background: linear-gradient(45deg, #27ae60, #2ecc71); color: white;">
+          <h6 class="mb-0">Pending Return Requests</h6>
+        </div>
+        <div class="card-body p-0">
+          {% if pending_returns %}
+            <ul class="list-group list-group-flush">
+              {% for rr in pending_returns %}
+                <li class="list-group-item">
+                  <div class="fw-semibold">Order {{ rr.order.invoice_number }} by {{ rr.user.username }}</div>
+                  <div class="text-muted small">Placed: {{ rr.order.created_at|date:"M d, Y" }}</div>
+                  <div class="mt-2">
+                    <span class="badge badge-site" style="font-size: 1rem;">Reason: {{ rr.get_reason_display }}</span>
+                    {% if rr.reason == 'other' and rr.reason_other %}
+                      <div class="text-muted small mt-1">{{ rr.reason_other }}</div>
+                    {% endif %}
+                  </div>
+                  <div class="mt-3 d-flex gap-3">
+                    <a href="{% url 'approve_return' rr.id %}" class="btn-plain">Approve</a>
+                    <a href="{% url 'decline_return' rr.id %}" class="btn-plain">Decline</a>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <div class="p-3 text-center text-muted">No pending returns</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

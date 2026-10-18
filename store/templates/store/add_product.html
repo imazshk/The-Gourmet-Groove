@@ -1,0 +1,94 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+  <div class="card shadow-sm" style="border-radius: 16px; overflow: hidden;">
+    <div class="card-header text-center" style="background: linear-gradient(45deg, #8e44ad, #9b59b6); color: white;">
+      <h2 class="mb-0">➕ Add New Product</h2>
+    </div>
+    <div class="card-body p-4">
+      <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" name="name" class="form-control" value="{{ form_data.name|default:'' }}" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea name="description" class="form-control" rows="4" required>{{ form_data.description|default:'' }}</textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Price (₹)</label>
+      <input type="number" name="price" step="0.01" class="form-control" value="{{ form_data.price|default:'' }}" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Category</label>
+      <select name="category" class="form-select" required>
+        <option value="" disabled selected>Select category</option>
+        {% for category in categories %}
+          <option value="{{ category.id }}" {% if form_data.category == category.id|stringformat:'s' %}selected{% endif %}>{{ category.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Brand (optional)</label>
+      <select name="brand" class="form-select">
+        <option value="" {% if not form_data.brand %}selected{% endif %}>No brand</option>
+        {% for b in brands %}
+          <option value="{{ b.id }}" {% if form_data.brand == b.id|stringformat:'s' %}selected{% endif %}>{{ b.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Image</label>
+      <input type="file" name="image" class="form-control" accept="image/*">
+    </div>
+        <div class="d-flex gap-3 mt-4">
+          <button type="submit" class="btn" style="background: linear-gradient(45deg, #2e8b57, #3cb371); color: white;">
+            <i class="fas fa-save me-2"></i>Save Product
+          </button>
+          <a href="{% url 'home' %}" class="btn" style="background: linear-gradient(45deg, #8B0000, #A52A2A); color: white;">
+            <i class="fas fa-times me-2"></i>Cancel
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+  .form-control, .form-select {
+    border: 2px solid #e0c9b1;
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: all 0.3s;
+  }
+  
+  .form-control:focus, .form-select:focus {
+    border-color: #8B4513;
+    box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.25);
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+  }
+</style>
+{% endblock %}

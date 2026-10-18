@@ -1,0 +1,47 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center mb-4" style="color: var(--chocolate-primary); font-weight: bold;">Shipping Policy – GourmetGrove</h1>
+          
+          <div class="text-center mb-4">
+            <i class="fas fa-shipping-fast" style="color: var(--chocolate-secondary); font-size: 3rem;"></i>
+          </div>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">1. General</h3>
+          <p>We deliver chocolates, candies, and confections across India. Our goal is to get your treats to you quickly and in perfect condition.</p>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">2. Processing & Dispatch</h3>
+          <ul>
+            <li>Orders placed before 2 PM are processed the same day (Mon–Sat).</li>
+            <li>Orders placed on Sundays or holidays are processed the next working day.</li>
+            <li>Delivery time depends on your location (2–7 working days on average).</li>
+          </ul>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">3. Shipping Fees</h3>
+          <ul>
+            <li>Free shipping for orders above ₹999.</li>
+            <li>Standard delivery charges apply otherwise, based on location.</li>
+          </ul>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">4. Unserviceable Areas</h3>
+          <p>If we cannot deliver to your pin code, you'll be notified before checkout.</p>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">5. Damaged Parcels</h3>
+          <p>If your package arrives melted, damaged, or tampered with, please refuse delivery and contact us immediately.</p>
+          
+          <div class="text-center mt-5">
+            <a href="{% url 'home' %}" class="btn btn-primary">
+              <i class="fas fa-home"></i> Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

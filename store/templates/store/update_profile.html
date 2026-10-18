@@ -1,0 +1,80 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">👤 Update Profile</h4>
+        </div>
+        <div class="card-body">
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <!-- Profile Picture -->
+            <div class="mb-4">
+              <label class="form-label">Profile Picture</label>
+              <div class="d-flex align-items-center">
+                {% if profile.profile_picture %}
+                  <img src="{{ profile.profile_picture.url }}" alt="Profile Picture" 
+                       style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-right: 20px;">
+                {% else %}
+                  <div style="width: 100px; height: 100px; background: #f8f9fa; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px;">
+                    <i class="fas fa-user" style="font-size: 2rem; color: #6c757d;"></i>
+                  </div>
+                {% endif %}
+                <div>
+                  <input type="file" class="form-control" name="profile_picture" accept="image/*">
+                  <small class="text-muted">Upload a new profile picture (JPG, PNG, GIF)</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" value="{{ user.username }}" readonly>
+                <small class="text-muted">Username cannot be changed</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>
+                <small class="text-muted">Enter your email address</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="phone_number" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone_number" name="phone_number" 
+                       value="{{ profile.phone_number|default:'' }}" placeholder="Enter phone number">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="birth_date" class="form-label">Birth Date</label>
+                <input type="date" class="form-control" id="birth_date" name="birth_date" 
+                       value="{{ profile.birth_date|date:'Y-m-d'|default:'' }}">
+                <small class="text-muted">We'll send you special birthday offers!</small>
+              </div>
+            </div>
+
+            <!-- Birthday Benefits Info -->
+            <div class="alert alert-info">
+              <h6>🎉 Birthday Benefits</h6>
+              <ul class="mb-0">
+                <li>Special discount offers on your birthday</li>
+                <li>Exclusive birthday promotions</li>
+                <li>Personalized birthday messages</li>
+              </ul>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-primary">Update Profile</button>
+              <a href="{% url 'profile' %}" class="btn btn-secondary">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %} 

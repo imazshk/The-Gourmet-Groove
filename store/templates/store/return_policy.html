@@ -1,0 +1,56 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center mb-4" style="color: var(--chocolate-primary); font-weight: bold;">Return & Refund Policy – GourmetGrove</h1>
+          
+          <div class="text-center mb-4">
+            <i class="fas fa-undo" style="color: var(--chocolate-secondary); font-size: 3rem;"></i>
+          </div>
+          
+          <p class="lead mb-4">
+            Because chocolates are perishable, we only accept returns or issue refunds under specific conditions:
+          </p>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">1. Eligible Returns/Refunds</h3>
+          <ul>
+            <li>Wrong product received</li>
+            <li>Damaged or melted chocolates on arrival</li>
+            <li>Missing items from your order</li>
+            <li>Package lost in transit</li>
+          </ul>
+          <p><strong>Note:</strong> Requests must be made within 48 hours of delivery with photo/video evidence.</p>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">2. Non-Refundable Cases</h3>
+          <ul>
+            <li>Change of mind or taste preference</li>
+            <li>Opened or partially consumed chocolates</li>
+            <li>Delay due to courier service beyond our control</li>
+          </ul>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">3. Process</h3>
+          <ol>
+            <li>Email <strong>support@themunchloom.com</strong> with your order ID, description, and proof.</li>
+            <li>Our team will verify and arrange a replacement or refund to the original payment method within 5–7 working days (if approved).</li>
+          </ol>
+          
+          <div class="alert alert-info mt-4">
+            <i class="fas fa-info-circle"></i>
+            <strong>Important:</strong> Please ensure you provide clear photos or videos of any damaged items to help us process your request quickly.
+          </div>
+          
+          <div class="text-center mt-5">
+            <a href="{% url 'home' %}" class="btn btn-primary">
+              <i class="fas fa-home"></i> Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'store/base.html' %}
+{% block content %}
+<div class="container py-3">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Manage Coupons</h3>
+    <a class="btn btn-primary" href="{% url 'coupon_create' %}">Add Coupon</a>
+  </div>
+
+  {% if coupons %}
+    <div class="row g-3">
+      {% for c in coupons %}
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100" style="border:2px solid var(--chocolate-light); box-shadow:0 8px 25px var(--product-detail-shadow);">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                <span class="badge">{{ c.code }}</span>
+                <span class="fw-bold">{{ c.get_discount_display }}</span>
+                {% if not c.is_active %}<span class="badge bg-secondary">Inactive</span>{% endif %}
+              </div>
+              {% if c.description %}
+                <div class="text-muted small mb-2">{{ c.description }}</div>
+              {% endif %}
+              <div class="text-muted small mb-2">Valid: {{ c.valid_from|date:'Y-m-d' }} → {{ c.valid_until|date:'Y-m-d' }}</div>
+              <div class="text-muted small mb-3">
+                Min: ₹{{ c.minimum_order_amount }}{% if c.maximum_discount_amount %} • Max Discount: ₹{{ c.maximum_discount_amount }}{% endif %}
+              </div>
+              <div class="mt-auto d-flex justify-content-between">
+                <span class="small text-muted">Used: {{ c.used_count }}{% if c.usage_limit %}/{{ c.usage_limit }}{% endif %}</span>
+                <form method="post" action="{% url 'coupon_delete' c.pk %}" onsubmit="return confirm('Delete coupon {{ c.code }}?');">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-info">No coupons yet. Click "Add Coupon" to create one.</div>
+  {% endif %}
+</div>
+{% endblock %}

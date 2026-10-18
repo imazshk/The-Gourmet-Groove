@@ -1,0 +1,56 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center mb-4" style="color: var(--chocolate-primary); font-weight: bold;">Terms of Use – GourmetGrove</h1>
+          
+          <div class="text-center mb-4">
+            <i class="fas fa-gavel" style="color: var(--chocolate-secondary); font-size: 3rem;"></i>
+          </div>
+          
+          <p class="lead mb-4">
+            Welcome to GourmetGrove! By using our website, you agree to comply with the following terms and conditions.
+          </p>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">Eligibility</h3>
+              <p>You must be at least 18 years old or use our site under parental supervision.</p>
+              
+              <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">Product Availability</h3>
+              <p>We do our best to keep products in stock, but availability may vary.</p>
+              
+              <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">Pricing</h3>
+              <p>Prices are subject to change without notice.</p>
+            </div>
+            
+            <div class="col-md-6">
+              <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">Order Acceptance</h3>
+              <p>Orders may be refused or canceled due to stock issues, incorrect pricing, or payment problems.</p>
+              
+              <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">Prohibited Use</h3>
+              <p>You agree not to misuse our website or attempt unauthorized access.</p>
+              
+              <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">Intellectual Property</h3>
+              <p>All content on our site is owned by GourmetGrove and cannot be reproduced without permission.</p>
+            </div>
+          </div>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">Governing Law</h3>
+          <p>Any disputes will be subject to the laws of Pune, Maharashtra, India.</p>
+          
+          <div class="text-center mt-5">
+            <a href="{% url 'home' %}" class="btn btn-primary">
+              <i class="fas fa-home"></i> Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

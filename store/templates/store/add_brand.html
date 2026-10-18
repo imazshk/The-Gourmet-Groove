@@ -1,0 +1,28 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2>🏷️ Add Brand</h2>
+  <form method="post" enctype="multipart/form-data" class="card p-4 mt-3">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-label">Brand Name</label>
+      <input type="text" name="name" class="form-control" value="{{ form_data.name|default:'' }}" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Brand Image (optional)</label>
+      <input type="file" name="image" class="form-control" accept="image/*">
+    </div>
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="checkbox" name="is_top" id="isTop" {% if form_data.is_top %}checked{% endif %}>
+      <label class="form-check-label" for="isTop">
+        Mark as Top Brand
+      </label>
+    </div>
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-success">Save</button>
+      <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}
