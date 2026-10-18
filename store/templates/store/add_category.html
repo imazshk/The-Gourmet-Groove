@@ -1,0 +1,20 @@
+{% extends 'store/base.html' %}
+{% block content %}
+<div class="container py-3">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Add Category</h3>
+    <a href="{% url 'home' %}" class="btn btn-outline-secondary">Back</a>
+  </div>
+
+  <form method="post" class="card p-3 mx-auto" style="border:2px solid var(--chocolate-light); box-shadow:0 8px 25px var(--product-detail-shadow); max-width:600px;">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-label">Category Name</label>
+      <input type="text" name="name" class="form-control" value="{{ form_data.name }}" required>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button type="submit" class="btn btn-primary">Add Category</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

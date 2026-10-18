@@ -1,0 +1,28 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+  <h2>Welcome, {{ user.username }}! 👋</h2>
+  <p>This is your chocolate dashboard.</p>
+  <p><a href="{% url 'logout' %}" class="btn btn-outline-danger">Logout</a></p>
+
+  <hr>
+
+  <h2>My Chocolate Downloads 🍫</h2>
+
+  {% if orders %}
+    <ul class="list-group">
+      {% for order in orders %}
+        <li class="list-group-item">
+          <strong>{{ order.chocolate.name }}</strong><br>
+          {% if order.chocolate.file %}
+            <a href="{{ order.chocolate.file.url }}" class="btn btn-sm btn-primary mt-1" download>⬇️ Download</a>
+          {% else %}
+            <span class="text-danger">No file available.</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted">No chocolate orders yet!</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,201 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+  <h2>Checkout 🧾</h2>
+  
+  {% if cart_items %}
+    <div class="row">
+      <div class="col-md-8">
+        <form method="post" action="{% url 'paypal_start' %}">
+          {% csrf_token %}
+          <!-- Address Selection -->
+          <div class="card mb-2">
+            <div class="card-header">
+              <h5>📍 Delivery Address</h5>
+            </div>
+            <div class="card-body">
+              {% if addresses %}
+                {% for address in addresses %}
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="address" id="address_{{ address.id }}" 
+                           value="{{ address.id }}" {% if address.is_default %}checked{% endif %}>
+                    <label class="form-check-label" for="address_{{ address.id }}">
+                      <div class="border rounded p-3 {% if address.is_default %}border-primary{% endif %}">
+                        {% if address.is_default %}
+                          <span class="badge mb-2">Default</span>
+                        {% endif %}
+                        <p class="mb-1">{{ address.address_line1 }}</p>
+                        {% if address.address_line2 %}
+                          <p class="mb-1">{{ address.address_line2 }}</p>
+                        {% endif %}
+                        <p class="mb-1">{{ address.city }}, {{ address.state }} {{ address.postal_code }}</p>
+                        <p class="mb-0 text-muted">{{ address.country }}</p>
+                      </div>
+                    </label>
+                  </div>
+                {% endfor %}
+              {% else %}
+                <div class="alert alert-info">
+                  <p class="mb-2">No delivery addresses found.</p>
+                  <a href="{% url 'add_address' %}" class="btn btn-primary btn-sm">Add Address</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+          <!-- Action Buttons directly under address card -->
+          <div class="mt-0">
+            {% if addresses %}
+              <button type="submit" class="btn btn-success btn-lg">✅ Confirm Order</button>
+            {% else %}
+              <button type="submit" class="btn btn-success btn-lg" disabled>✅ Confirm Order</button>
+              <small class="text-muted d-inline-block ms-2">Please add a delivery address first</small>
+            {% endif %}
+            <a href="{% url 'cart' %}" class="btn btn-secondary btn-lg ms-2">Back to Cart</a>
+          </div>
+        </form>
+      </div>
+      
+      <div class="col-md-4">
+        <!-- Apply Coupon (separate box) -->
+        <div class="card mb-3" style="min-height: 280px;">
+          <div class="card-header">
+            <h5>🏷️ Apply Coupon</h5>
+          </div>
+          <div class="card-body">
+            <form method="post" class="d-flex flex-column gap-2">
+              {% csrf_token %}
+              <input type="hidden" name="action" value="apply_coupon">
+              <label for="coupon_code_input" class="form-label mb-1">Coupon Code</label>
+              <input id="coupon_code_input" name="coupon_code" type="text" class="form-control form-control-lg" placeholder="Enter coupon code" value="{{ applied_coupon.code }}" />
+              <div class="d-flex gap-2 mt-2">
+                <a href="{% url 'coupons_list' %}?next=checkout" class="btn btn-outline-secondary flex-fill">View Coupons</a>
+                <button type="submit" class="btn btn-primary flex-fill">Submit</button>
+              </div>
+            </form>
+            {% if discount and discount > 0 %}
+              <div class="mt-2">
+                <span class="badge bg-success">Applied: {{ applied_coupon.code }}</span>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="card" style="min-height: 280px;">
+          <div class="card-header">
+            <h5>📋 Order Summary</h5>
+          </div>
+          <div class="card-body">
+            {% for item in cart_items %}
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="d-flex align-items-center">
+                  <img src="{{ item.chocolate.image.url }}" alt="{{ item.chocolate.name }}" 
+                       style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px;" class="me-2">
+                  <div class="small">
+                    <strong class="d-block">{{ item.chocolate.name }}</strong>
+                    <span class="text-muted">Qty: {{ item.quantity }}</span>
+                  </div>
+                </div>
+                <span class="small">Rs. {{ item.total_price }}</span>
+              </div>
+            {% endfor %}
+            <hr>
+            <div class="d-flex justify-content-between">
+              <span>Subtotal:</span>
+              <span>Rs. {{ subtotal }}</span>
+            </div>
+            {% if discount and discount > 0 %}
+            <div class="d-flex justify-content-between">
+              <span>Discount ({{ applied_coupon.code }}):</span>
+              <span>-Rs. {{ discount }}</span>
+            </div>
+            {% endif %}
+            <div class="d-flex justify-content-between">
+              <span>Tax (5%):</span>
+              <span>Rs. {{ tax_amount }}</span>
+            </div>
+            {% if applied_coupon and applied_coupon.code|upper == 'FREESHIP' and delivery_fee == 0 %}
+              <div class="d-flex justify-content-between align-items-center">
+                <span>Delivery: <span class="text-muted text-decoration-line-through">Rs. 20.00</span> <span class="badge ms-1">FREESHIP</span></span>
+                <span>Rs. 0.00</span>
+              </div>
+            {% else %}
+              <div class="d-flex justify-content-between">
+                <span>Delivery:</span>
+                <span>Rs. {{ delivery_fee }}</span>
+              </div>
+            {% endif %}
+            <hr>
+            <div class="d-flex justify-content-between">
+              <strong>Grand Total:</strong>
+              <strong>Rs. {{ grand_total }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coupons Modal -->
+    <div class="modal fade" id="couponsModal" tabindex="-1" aria-labelledby="couponsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="couponsModalLabel">Available Coupons</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            {% if coupons %}
+              <ul class="list-group">
+                {% for c in coupons %}
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div>
+                      <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <strong>{{ c.code }}</strong> — {{ c.get_discount_display }}
+                        {% with code=c.code|upper %}
+                          {% if code == 'SWEETBIRTHDAY' %}<span class="badge">Birthday</span>{% endif %}
+                          {% if code == 'WELCOME10' %}<span class="badge">First Purchase</span>{% endif %}
+                          {% if code == 'FREESHIP' %}<span class="badge">Free Shipping ≥ ₹1000</span>{% endif %}
+                          {% if code == 'CHOCOLATEISLIFE' %}<span class="badge">Anytime</span>{% endif %}
+                          {% if code == 'MIDNIGHTMUNCH' %}<span class="badge">10 PM–2 AM</span>{% endif %}
+                        {% endwith %}
+                      </div>
+                      {% if c.description %}<div class="text-muted small">{{ c.description }}</div>{% endif %}
+                    </div>
+                    <div class="ms-2">
+                      <button type="button" class="btn btn-sm btn-outline-primary" onclick="copyCoupon('{{ c.code }}')">Copy code</button>
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p class="text-muted mb-0">No coupons available right now.</p>
+            {% endif %}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function copyCoupon(code) {
+        try {
+          navigator.clipboard.writeText(code).then(function(){
+            const input = document.getElementById('coupon_code_input');
+            if (input) { input.value = code; }
+          });
+        } catch (e) {
+          const input = document.getElementById('coupon_code_input');
+          if (input) { input.value = code; }
+        }
+      }
+    </script>
+  {% else %}
+    <div class="text-center py-5">
+      <h4 class="text-muted">Your cart is empty</h4>
+      <p class="text-muted">Add some items to your cart before checkout!</p>
+      <a href="{% url 'home' %}" class="btn btn-primary btn-lg">Continue Shopping</a>
+    </div>
+  {% endif %}
+{% endblock %}

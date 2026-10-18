@@ -1,0 +1,46 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+  <div class="py-5">
+
+    <div class="card mx-auto" style="max-width: 720px;">
+      <div class="card-body">
+        <p class="fs-5 mb-2">Your order has been placed successfully.</p>
+        <p class="mb-1">
+          <strong>Delivery Agent:</strong>
+          {{ delivery_agent.name|default:'To be assigned' }}
+          (<span>{% if delivery_agent and delivery_agent.phone_number %}<a href="tel:{{ delivery_agent.phone_number }}">{{ delivery_agent.phone_number }}</a>{% else %}N/A{% endif %}</span>)
+        </p>
+        <p class="mb-1">
+          <strong>Store:</strong>
+          {% if nearest_store %}
+            {{ nearest_store.name }}{% if nearest_store.city %}, {{ nearest_store.city }}{% endif %}
+          {% else %}
+            To be allocated
+          {% endif %}
+        </p>
+        {% if eta_window or eta_text %}
+          <p class="mb-0">
+            <strong>Estimated Delivery:</strong>
+            {% if eta_window %}{{ eta_window }}{% endif %}
+            {% if eta_text %}<span class="text-muted">(by {{ eta_text }})</span>{% endif %}
+          </p>
+        {% endif %}
+
+        {% if primary_order %}
+          <p class="text-muted mt-2 mb-0">Order ID: ORD-{{ primary_order.id }} • Invoice: {{ primary_order.invoice_number }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-center gap-2 flex-wrap">
+      <a href="{% url 'profile' %}" class="btn btn-primary btn-lg">View Order History</a>
+      {% if primary_order %}
+        <a href="{% url 'download_invoice' primary_order.id %}" class="btn btn-primary btn-lg" download>
+          Download Invoice
+        </a>
+      {% endif %}
+      <a href="{% url 'home' %}" class="btn btn-secondary btn-lg">Continue Shopping</a>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+  <style>
+    .auth-section { min-height: 78vh; display: grid; grid-template-columns: 1.1fr 1fr; }
+    @media (max-width: 992px) { .auth-section { grid-template-columns: 1fr; } }
+    .auth-hero {
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--cream) 100%);
+      color: var(--text-primary); display: flex; align-items: center; justify-content: center; padding: 48px 24px;
+    }
+    .hero-inner { max-width: 640px; text-align: center; }
+    .hero-title { font-weight: 900; font-size: 2.1rem; line-height: 1.2; color: var(--chocolate-primary); }
+    .hero-sub { color: var(--text-secondary); margin-top: 10px; }
+    .auth-panel { display: flex; align-items: center; justify-content: center; padding: 48px 20px; background: transparent; }
+    .auth-card {
+      width: 100%; max-width: 560px; background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%);
+      border-radius: 18px; box-shadow: 0 8px 25px var(--product-detail-shadow); border: 2px solid var(--chocolate-light);
+      padding: 0;
+    }
+    .auth-card > .inner { background: transparent; border-radius: 16px; padding: 26px 26px 22px; color: var(--text-primary); }
+    .auth-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--chocolate-light); color: var(--cream); padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 0.8rem; border: none; }
+    .auth-title { font-weight: 900; color: var(--chocolate-primary); letter-spacing: 0.2px; margin: 8px 0 4px; }
+    .auth-subtitle { color: var(--text-secondary); margin-bottom: 14px; }
+    /* Tweak default as_p rendering */
+    form p { margin-bottom: 12px; }
+    form label { font-weight: 600; color: var(--text-primary); }
+    .auth-card input, .auth-card select, .auth-card textarea { width: 100%; color: var(--text-primary); }
+    .auth-card .form-control, .auth-card input, .auth-card select, .auth-card textarea { border-radius: 12px; background: var(--card-bg); border: 2px solid var(--chocolate-light); padding: 11px 12px; color: var(--text-primary); }
+    .auth-card .form-control::placeholder, .auth-card input::placeholder { color: var(--text-secondary); }
+    .auth-card .form-control:focus, .auth-card input:focus, .auth-card select:focus, .auth-card textarea:focus { border-color: var(--chocolate-secondary); box-shadow: 0 0 15px rgba(139, 69, 19, 0.3); outline: none; }
+    .btn-auth { width: 100%; background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)); border: none; color: var(--cream); font-weight: 900; border-radius: 12px; padding: 11px 14px; letter-spacing: .2px; }
+    .btn-auth:hover { filter: brightness(.95); }
+    .auth-meta { text-align: center; margin-top: 14px; color: var(--text-secondary); }
+    .auth-meta a { color: var(--chocolate-primary); font-weight: 800; text-decoration: none; }
+    .auth-meta a:hover { text-decoration: underline; }
+    .err-block { margin-bottom: 10px; }
+    .text-muted { color: var(--chocolate-secondary) !important; }
+  </style>
+
+  <section class="auth-section">
+    <div class="auth-hero">
+      <div class="hero-inner">
+        <div class="auth-badge">🍫 GourmetGrove</div>
+        <h1 class="hero-title mt-2">Create your account</h1>
+        <p class="hero-sub">Join and unlock exclusive chocolate deals, faster checkout, and sweet surprises.</p>
+      </div>
+    </div>
+
+    <div class="auth-panel">
+      <div class="auth-card"><div class="inner">
+        <div class="d-flex align-items-center justify-content-between">
+          <h3 class="auth-title mb-0">Sign up</h3>
+          <span class="badge rounded-pill">Join • Free</span>
+        </div>
+        <div class="auth-subtitle">It only takes a minute.</div>
+
+        {% if form.non_field_errors %}
+          <div class="alert alert-danger err-block" role="alert">{{ form.non_field_errors }}</div>
+        {% endif %}
+
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-auth mt-1">Create account</button>
+        </form>
+
+        <hr class="my-3" style="opacity:.35;border-color: var(--chocolate-light);">
+        <div class="d-flex justify-content-center gap-3 small text-muted">
+          <div>✅ Secure Checkout</div>
+          <div>✅ Wishlist Sync</div>
+          <div>✅ Order Tracking</div>
+        </div>
+
+        <div class="auth-meta">Already have an account? <a href="{% url 'login' %}">Log in</a></div>
+      </div></div>
+    </div>
+  </section>
+{% endblock %}

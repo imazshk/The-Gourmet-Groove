@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: gourmet-groove
+    runtime: python
+    plan: free
+    buildCommand: ./build.sh
+    startCommand: python manage.py migrate --no-input && python manage.py seed_demo && gunicorn chocolates.wsgi:application --workers 2 --threads 4 --timeout 60
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.4
+      - key: DEBUG
+        value: "False"
+      - key: DJANGO_SECRET_KEY
+        generateValue: true

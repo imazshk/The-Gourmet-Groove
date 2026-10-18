@@ -1,0 +1,169 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <h2 class="text-center mb-4">{{ user.username }}'s Profile 👤</h2>
+
+  <!-- Birthday Offer Banner -->
+  {% if birthday_offer %}
+    <div class="alert alert-success text-center mb-4">
+      <h4>🎉 Happy Birthday! 🎉</h4>
+      <p class="mb-2">You have a special {{ birthday_offer.discount_percentage }}% discount on all products today!</p>
+      <a href="{% url 'home' %}" class="btn btn-primary">Shop Now</a>
+    </div>
+  {% endif %}
+
+  <!-- Profile Information -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="mb-0">👤 Profile Information</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-3 text-center">
+          {% if profile.profile_picture %}
+            <img src="{{ profile.profile_picture.url }}" alt="Profile Picture" 
+                 style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 3px solid #e74c3c;">
+          {% else %}
+            <div style="width: 120px; height: 120px; background: #f8f9fa; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 3px solid #e74c3c; margin: 0 auto;">
+              <i class="fas fa-user" style="font-size: 3rem; color: #6c757d;"></i>
+            </div>
+          {% endif %}
+          <div class="mt-3">
+            <a href="{% url 'update_profile' %}" class="btn btn-outline-primary btn-sm">Edit Profile</a>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-6">
+              <p><strong>Username:</strong> {{ user.username }}</p>
+              <p><strong>Email:</strong> {{ user.email }}</p>
+              <p><strong>Date Joined:</strong> {{ user.date_joined|date:"M d, Y" }}</p>
+            </div>
+            <div class="col-md-6">
+              <p><strong>Phone:</strong> {{ profile.phone_number|default:"Not provided" }}</p>
+              <p><strong>Birth Date:</strong> {{ profile.birth_date|date:"M d, Y"|default:"Not provided" }}</p>
+              <p><strong>Last Login:</strong> {{ user.last_login|date:"M d, Y H:i"|default:"Never" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Address Management Section -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="mb-0">📍 Delivery Addresses</h5>
+    </div>
+    <div class="card-body">
+      {% if addresses %}
+        {% for address in addresses %}
+          <div class="border rounded p-3 mb-3 {% if address.is_default %}border-primary{% endif %}">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                {% if address.is_default %}
+                  <span class="badge mb-2">Default</span>
+                {% endif %}
+                <p class="mb-1">{{ address.address_line1 }}</p>
+                {% if address.address_line2 %}
+                  <p class="mb-1">{{ address.address_line2 }}</p>
+                {% endif %}
+                <p class="mb-1">{{ address.city }}, {{ address.state }} {{ address.postal_code }}</p>
+                <p class="mb-0 text-muted">{{ address.country }}</p>
+              </div>
+              <a href="{% url 'delete_address' address.pk %}" class="btn btn-sm btn-outline-danger" 
+                 onclick="return confirm('Are you sure you want to delete this address?')">
+                Delete
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="text-muted">No addresses added yet.</p>
+      {% endif %}
+      
+      <a href="{% url 'add_address' %}" class="btn btn-primary">
+        {% if addresses %}➕ Add Another Address{% else %}➕ Add Address{% endif %}
+      </a>
+    </div>
+  </div>
+
+  <!-- Order History Section -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="mb-0">📋 Order History</h5>
+    </div>
+    <div class="card-body">
+      {% if orders %}
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Order Date</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Invoice</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in orders %}
+                <tr>
+                  <td>{{ order.created_at|date:"M d, Y" }}</td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img src="{{ order.chocolate.image.url }}" alt="{{ order.chocolate.name }}" 
+                           style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px;" class="me-2">
+                      {{ order.chocolate.name }}
+                    </div>
+                  </td>
+                  <td>{{ order.quantity }}</td>
+                  <td>₹{{ order.total_price }}</td>
+                  <td>
+                    <a href="{% url 'download_invoice' order.id %}" class="btn btn-sm btn-outline-primary" download>
+                      Download
+                    </a>
+                    <a href="{% url 'return_request' order.id %}" class="btn btn-sm btn-outline-danger ms-2">
+                      Return Item
+                    </a>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <div class="text-center py-4">
+          <h6 class="text-muted">No orders yet</h6>
+          <p class="text-muted">Start shopping to see your order history here!</p>
+          <a href="{% url 'home' %}" class="btn btn-primary">Browse Products</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Account Information -->
+  <div class="card">
+    <div class="card-header">
+      <h5 class="mb-0">👤 Account Information</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>Username:</strong> {{ user.username }}</p>
+          <p><strong>Email:</strong> {{ user.email }}</p>
+          <p><strong>Date Joined:</strong> {{ user.date_joined|date:"M d, Y" }}</p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Total Orders:</strong> {{ orders.count }}</p>
+          <p><strong>Total Addresses:</strong> {{ addresses.count }}</p>
+          <p><strong>Last Login:</strong> {{ user.last_login|date:"M d, Y H:i"|default:"Never" }}</p>
+        </div>
+      </div>
+         </div>
+   </div>
+ </div>
+{% endblock %} 

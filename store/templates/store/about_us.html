@@ -1,0 +1,41 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center mb-4" style="color: var(--chocolate-primary); font-weight: bold;">About GourmetGrove</h1>
+          
+          <div class="text-center mb-4">
+            <i class="fas fa-heart" style="color: var(--chocolate-secondary); font-size: 3rem;"></i>
+          </div>
+          
+          <p class="lead text-center mb-4">
+            Founded in 2025 with one sweet and simple mission – to spread joy through irresistible chocolates and confections – GourmetGrove is your go-to destination for indulgence.
+          </p>
+          
+          <p class="mb-4">
+            From our very first batch of handcrafted delights to our growing collection today, we've been committed to bringing happiness in every bite. Whether you're a fan of silky milk chocolate, bold dark bars, creamy white blocks, chewy gums, or fruity jellies, we've got something to satisfy every craving.
+          </p>
+          
+          <p class="mb-4">
+            Our chocolates are crafted with love and care, using the finest ingredients sourced from trusted partners. Every product is designed not just to taste amazing, but to create moments worth savoring.
+          </p>
+          
+          <p class="mb-4">
+            At GourmetGrove, we believe chocolate isn't just a treat – it's a little piece of magic. So, take a moment, unwrap the goodness, and let the flavors melt your worries away.
+          </p>
+          
+          <div class="text-center mt-5">
+            <a href="{% url 'home' %}" class="btn btn-primary">
+              <i class="fas fa-home"></i> Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,1268 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Ensure proper emoji rendering -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https:; img-src 'self' data: https:; font-src 'self' https: data:;">
+  <meta name="theme-color" content="#3E2723">
+  <meta name="msapplication-TileColor" content="#3E2723">
+  <meta name="msapplication-config" content="none">
+  <title>GourmetGrove - Premium Chocolates & Confections</title>
+  <meta name="description" content="Discover our handcrafted artisanal chocolates made with the finest ingredients. Shop now for a sweet experience!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO2WwUoDQRCG/5nZ3SS7m2x2N5tN9iEQ8CJ4E0/w5sGz4E08eRIP4gN48iQeBA8iCCIIHkQQBEEQBBE8CIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgIuQBuAawBdAGUABQnZ8H4BzAAMC2s/8AeAJwAqD2HwA9AE8A1gDqAGoACgCq8/MAnAEYAtgBsOvsPwCeARwDqP8HwD6AVwA7AJoAqgAKAKrz8wCcAhgB2AOw5+w/AF4AHAFo/AfAEYB3ADsAWgCqAAoAqvPzAJwAGAPYB7Dv7D8AXgEcA2j+B8AxgA8AuwDaAKoACgCq8/MAHAMYA+gCOHD2HwCvAE4AtP4D4ATAJ4A9AB0AVQAFANX5eQCOAIwBHAA4dPYfAK8ATgG0/wPgFMAXgH0AXQBVAAUA1fl5AA4BjAAcAjhy9h8ArwDOALT/A+AUwDeAAwA9AFUABQDV+XkADgAMARwBOHb2HwCvAM4BdP4D4AzAD4BDAH0AVQAFANX5eQD2AQwAHAE4cfYfAK8AzgF0/wPgDMAvgCMA9wCqAAoAqvPzAOwB6AM4BnDq7D8AXgGcA+j9B8AZgD8AxwAeAFQBFABU5+cB2AXQA3AC4MzZfwC8AjgH0P8PgDMAfwBOADwCqAIoAKjOzwOwA6AL4BTAubP/AHgFcAGg/x8AZwD+AJwCeAJQBVAAUJ2fB2AbQAfAGYALZ/8B8ArgEkD3PwDOAPwBOAPwDKAKoACgOj8PwBaANoBzAJfO/gPgFcAVgO5/AJwB+ANwDuAFQBVAAUB1fh6ATQAtABcArpz9B8ArgGsA3f8AOAPwB+ACwCuAKoACgOr8PACbAJoALgFcO/sPgFcANwC6/wFwBuAPwCWANwBVAAUA1fl5ADYANABcAbhx9h8ArwBuAfT+A+AMwB+AawDvAKoACgCq8/MArANoALgGcOvsPwBeAdwB6P8HwBmAPwA3AD4AVAEUAFTn5wFYA1AHcAPg1tl/ALwCuAfQ/w+AMwB/AB4AfAKoAigAqM7PA7AKoAbgFsCds/8AeAVwD6D/HwBnAP4APAD4AlAFUABQnZ8HYAVAFcAdgHtn/wHwCuAeQP8/AM4A/AF4BPAFoAqgAKA6Pw/AMoAKgDsAD87+A+AVwD2A/n8AnAH4A/AE4BtAFUABQHV+HoAlAGUA9wAenf0HwCuAewD9/wA4A/AH4BnAD4AqgAKA6vw/AEoASgAeADw5+w+AVwCPAPr/AXAG4A/AC4BfAFUABQDV+XkAFgEUATwCeHb2HwCvAJ4A9P8D4AzAH4BXAH8AqgAKAKrz8wAsACgAeALw4uw/AF4BPAPo/wfAGYA/AG8A/gFwQ9kGcTvWwQAAAABJRU5ErkJggg==">
+  <style>
+    /* CSS Variables for theming */
+    :root {
+      --bg-primary: #FFF5E6;
+      --bg-secondary: #FFFFFF;
+      --text-primary: #3E2723;
+      --text-secondary: #5D4037;
+      --border-color: #D7CCC8;
+      --card-bg: #FFFFFF;
+      --navbar-bg: #3E2723;
+      --navbar-text: #FFFFFF;
+      --chocolate-card-bg: #FFF9F0;
+      --chocolate-card-border: #D7CCC8;
+      --chocolate-card-shadow: rgba(62, 39, 35, 0.1);
+      --product-detail-bg: #FFF9F0;
+      --product-detail-shadow: rgba(62, 39, 35, 0.15);
+      --chocolate-primary: #5D4037;
+      --chocolate-secondary: #8D6E63;
+      --chocolate-light: #D7CCC8;
+      --chocolate-dark: #3E2723;
+      --cream: #FFF9F0;
+      --caramel: #D2691E;
+      --gold: #D4AF37;
+      --milk-chocolate: #7B3F00;
+      --dark-chocolate: #3E2723;
+      --white-chocolate: #F5F5DC;
+    }
+
+
+
+    /* Base font stack with emoji support */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Enhanced emoji support */
+    .emoji, .chocolate-icon, [role="img"], [data-emoji] {
+      font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "Symbola", sans-serif !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-size: 1.2em !important;
+      line-height: 1 !important;
+      display: inline-block !important;
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      vertical-align: middle !important;
+      text-rendering: auto !important;
+    }
+    
+    /* Ensure emojis in buttons and links are properly aligned */
+    .btn .emoji, .nav-link .emoji, .dropdown-item .emoji {
+      position: relative;
+      top: -1px;
+    }
+    /* Ensure emojis are properly sized */
+    .emoji, .chocolate-icon {
+      font-size: 1.2em;
+      line-height: 1;
+      vertical-align: middle;
+    }
+    
+    /* Ensure emojis in buttons and links are properly aligned */
+    .btn .emoji, .nav-link .emoji, .dropdown-item .emoji {
+      position: relative;
+      top: -1px;
+    }
+    
+    body {
+      background: linear-gradient(135deg, var(--white-chocolate) 0%, var(--cream) 100%) !important;
+      color: var(--text-primary) !important;
+      transition: all 0.3s ease;
+      min-height: 100vh;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 .895 2 2 2zm56-76c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d7ccc8' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E") !important;
+    }
+
+    /* Only apply flex layout on home page for footer positioning */
+    body.home-page {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top utility bar */
+    .topbar {
+      background: linear-gradient(135deg, var(--cream) 0%, var(--bg-secondary) 100%);
+      border-bottom: 1px solid var(--chocolate-light);
+      font-size: 0.9rem;
+    }
+    .topbar .navbar-brand {
+      color: var(--chocolate-primary) !important;
+    }
+    .topbar a {
+      color: var(--navbar-text) !important;
+      text-decoration: none;
+    }
+    .topbar a:hover {
+      color: var(--chocolate-secondary) !important;
+    }
+    .topbar .badge {
+      transform: translateY(-1px);
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--chocolate-dark) 0%, var(--chocolate-primary) 100%) !important;
+      border-bottom: 3px solid var(--gold) !important;
+      box-shadow: 0 4px 20px rgba(93, 64, 55, 0.4);
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand {
+      color: var(--gold) !important;
+      font-weight: 700;
+      font-size: 1.6rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      letter-spacing: 1px;
+      padding: 0.25rem 0;
+    }
+    
+    .nav-link {
+      color: var(--cream) !important;
+      font-weight: 500;
+      padding: 0.8rem 1rem !important;
+      margin: 0 0.2rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-link.text-danger {
+      color: #ff6b6b !important;
+      font-weight: 600;
+    }
+    
+    .nav-link.text-danger:hover {
+      background-color: rgba(255, 107, 107, 0.1);
+    }
+
+    /* Top Brands: normalize logo sizing */
+    .brand-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px; /* uniform card height */
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid var(--chocolate-light);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 0; /* remove inner gap */
+      overflow: hidden; /* clip image to rounded border */
+    }
+    .brand-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* fill entire card */
+      border-radius: inherit; /* match card rounding */
+      display: block;
+      background-color: #fff;
+    }
+    .brand-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 80px;
+      font-weight: 600;
+      color: var(--chocolate-primary);
+    }
+
+    .card {
+      background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%) !important;
+      border: 2px solid var(--chocolate-light) !important;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15);
+    }
+
+    .bg-light {
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--cream) 100%) !important;
+    }
+
+    .text-muted {
+      color: var(--chocolate-secondary) !important;
+    }
+
+    .border-bottom {
+      border-bottom-color: var(--chocolate-light) !important;
+    }
+
+    /* All Brands: make all buttons same size as the tallest (supports 2-line names) */
+    #tabAllBrands .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: normal; /* allow wrapping */
+      line-height: 1.1;
+      height: 56px; /* uniform height like Bubble Gum Bubble Yum */
+      padding: 6px 10px;
+      font-weight: 600;
+      border-radius: 12px;
+    }
+    @media (max-width: 576px) {
+      #tabAllBrands .btn { height: 64px; }
+    }
+
+    /* Types: match button sizing with All Brands */
+    #tabTypes .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: normal;
+      line-height: 1.1;
+      height: 56px;
+      padding: 6px 10px;
+      font-weight: 600;
+      border-radius: 12px;
+    }
+    @media (max-width: 576px) {
+      #tabTypes .btn { height: 64px; }
+    }
+
+    /* All Brands & Types: transparent default, themed on hover */
+    #tabAllBrands .btn,
+    #tabTypes .btn {
+      background: transparent !important;
+      color: var(--chocolate-primary) !important;
+      border: none !important;
+      box-shadow: none !important;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #tabAllBrands .btn:hover,
+    #tabTypes .btn:hover {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      color: var(--cream) !important;
+      border: none !important;
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(139, 69, 19, 0.25) !important;
+    }
+
+    /* Chocolate cards specific styling */
+    .chocolate {
+      background: linear-gradient(145deg, var(--chocolate-card-bg) 0%, var(--cream) 100%) !important;
+      border: 2px solid var(--chocolate-light) !important;
+      box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15) !important;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .chocolate:hover {
+      box-shadow: 0 12px 35px rgba(139, 69, 19, 0.25) !important;
+      transform: translateY(-5px);
+      border-color: var(--chocolate-secondary) !important;
+    }
+
+    .chocolate h2 {
+      color: var(--chocolate-primary) !important;
+      font-weight: bold;
+    }
+
+    .chocolate p {
+      color: var(--chocolate-secondary) !important;
+    }
+
+    /* Product detail page styling */
+    .product-detail {
+      background: linear-gradient(145deg, var(--product-detail-bg) 0%, var(--cream) 100%) !important;
+      box-shadow: 0 12px 40px rgba(139, 69, 19, 0.2) !important;
+      border-radius: 20px;
+      border: 2px solid var(--chocolate-light);
+    }
+
+    .product-title {
+      color: var(--chocolate-primary) !important;
+      font-weight: bold;
+    }
+
+    .product-description {
+      color: var(--chocolate-secondary) !important;
+    }
+
+    .product-category {
+      background: linear-gradient(135deg, var(--chocolate-light) 0%, var(--caramel) 100%) !important;
+      color: var(--cream) !important;
+      border-radius: 20px;
+      padding: 8px 15px;
+    }
+
+    /* Form styling */
+    .form-control {
+      background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%) !important;
+      border: 2px solid var(--chocolate-light) !important;
+      color: var(--text-primary) !important;
+      border-radius: 10px;
+    }
+
+    .form-control:focus {
+      background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%) !important;
+      border: 2px solid var(--chocolate-secondary) !important;
+      color: var(--text-primary) !important;
+      box-shadow: 0 0 15px rgba(139, 69, 19, 0.3);
+    }
+
+    /* Dropdown styling */
+    .dropdown-content {
+      background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%) !important;
+      border: 2px solid var(--chocolate-light) !important;
+      border-radius: 15px;
+    }
+
+    .dropdown-content a {
+      color: var(--chocolate-primary) !important;
+    }
+
+    .dropdown-content a:hover {
+      background: linear-gradient(135deg, var(--chocolate-light) 0%, var(--caramel) 100%) !important;
+      color: var(--cream) !important;
+    }
+
+    .dropdown-content a.active {
+      background: linear-gradient(135deg, var(--chocolate-secondary) 0%, var(--chocolate-primary) 100%) !important;
+      color: var(--cream) !important;
+    }
+
+    /* Alert styling */
+    .alert {
+      background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%) !important;
+      border: 2px solid var(--chocolate-light) !important;
+      color: var(--text-primary) !important;
+      border-radius: 15px;
+    }
+
+    /* Price Tag */
+    .price-tag {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--chocolate-dark);
+      font-family: 'Playfair Display', serif;
+      position: relative;
+      display: inline-block;
+      padding: 0.25rem 1rem;
+      background: linear-gradient(135deg, #fff9f0, #fff);
+      border-radius: 50px;
+      box-shadow: 0 2px 8px rgba(93, 64, 55, 0.1);
+      border: 1px solid var(--chocolate-light);
+    }
+    
+    .price-tag::before {
+      content: '₹';
+      font-size: 1rem;
+      margin-right: 2px;
+      opacity: 0.8;
+    }
+
+    /* Product Cards */
+    .card {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background: var(--chocolate-card-bg);
+      border: 1px solid var(--chocolate-light);
+      box-shadow: 0 6px 16px rgba(93, 64, 55, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--caramel), var(--chocolate-primary));
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(62, 39, 35, 0.15);
+    }
+    
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+      transition: transform 0.5s ease;
+    }
+    
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+      background: linear-gradient(to bottom, #fff, var(--cream));
+    }
+    
+    .card-title {
+      color: var(--chocolate-dark);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    
+    .card-text {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    /* Badge styling */
+    .badge {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      border: none;
+    }
+
+    /* Buttons */
+    .btn {
+      border-radius: 50px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: none;
+    }
+    
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    
+    .btn:hover::after {
+      transform: translateX(0);
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, var(--chocolate-primary), var(--chocolate-secondary));
+      box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(93, 64, 55, 0.4);
+    }
+    
+    .btn-outline-primary {
+      background: transparent;
+      border: 2px solid var(--chocolate-primary);
+      color: var(--chocolate-primary);
+    }
+    
+    .btn-outline-primary:hover {
+      background: var(--chocolate-primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(93, 64, 55, 0.2);
+    }
+
+    /* Remove blue colors from all elements */
+    .text-primary {
+      color: var(--chocolate-primary) !important;
+    }
+
+    .bg-primary {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+    }
+
+    .border-primary {
+      border-color: var(--chocolate-primary) !important;
+    }
+
+    /* Override any remaining blue colors */
+    .btn-outline-primary {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      border: none !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-primary:hover {
+      background: linear-gradient(45deg, var(--chocolate-primary), var(--chocolate-secondary)) !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-secondary {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      border: none !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-info {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      border: none !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-warning {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      border: none !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-danger {
+      background: linear-gradient(45deg, #e74c3c, #c0392b) !important;
+      border: none !important;
+      color: white !important;
+    }
+
+    .btn-outline-success {
+      background: linear-gradient(45deg, #27ae60, #2ecc71) !important;
+      border: none !important;
+      color: white !important;
+    }
+
+    /* Navbar quote styling */
+    .navbar-quote {
+      font-style: italic;
+      color: var(--chocolate-primary);
+      font-weight: 500;
+      margin: 0;
+      font-size: 0.95rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    /* Filter section quote styling */
+    .filter-quote {
+      font-style: italic;
+      color: var(--chocolate-primary);
+      font-weight: 500;
+      font-size: 1rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Footer styling */
+    .footer {
+      background: linear-gradient(135deg, var(--chocolate-dark) 0%, var(--chocolate-primary) 55%, var(--chocolate-secondary) 100%);
+      color: #ecf0f1;
+      padding: 40px 0 20px;
+      border-top: 3px solid var(--chocolate-light);
+      position: relative;
+    }
+
+    /* Footer margin only on home page */
+    body.home-page .footer {
+      margin-top: auto;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--chocolate-light) 0%, var(--caramel) 50%, var(--chocolate-light) 100%);
+    }
+
+    .footer h5 {
+      color: #ecf0f1;
+      font-weight: bold;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--chocolate-light);
+      padding-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .footer p, .footer a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .footer a:hover {
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    .footer-contact {
+      background: rgba(255, 248, 220, 0.1);
+      padding: 15px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(222, 184, 135, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .footer-contact i {
+      color: var(--chocolate-light);
+      margin-right: 10px;
+      font-size: 1.1rem;
+    }
+
+    .footer-btn {
+      background: transparent;
+      color: #ffffff;
+      padding: 0;
+      border-radius: 0;
+      font-weight: 600;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+      text-decoration: none;
+      display: block;
+      margin: 8px 0;
+      text-align: left;
+      box-shadow: none;
+      border: none;
+    }
+
+    .footer-btn:hover {
+      background: transparent;
+      transform: none;
+      color: #ffffff;
+      text-decoration: underline;
+      box-shadow: none;
+    }
+
+    .footer-category {
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      margin: 8px 0;
+      display: block;
+      transition: color 0.2s ease;
+      border: none;
+      text-align: left;
+    }
+
+    .footer-category a {
+      color: #ffffff !important;
+      text-decoration: none !important;
+      display: inline-block;
+      padding: 0;
+    }
+
+    .footer-category a:hover {
+      color: var(--cream) !important;
+      text-decoration: underline !important;
+    }
+
+    .footer-bottom {
+      border-top: 2px solid rgba(222, 184, 135, 0.3);
+      padding-top: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .social-links a {
+      color: #ffffff;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: all 0.3s;
+      padding: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .social-links a:hover {
+      color: #ffffff;
+      background: var(--chocolate-secondary);
+      transform: scale(1.2);
+    }
+
+    /* Filter buttons styling */
+    .filter-btn {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary));
+      color: var(--cream);
+      padding: 10px 18px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    }
+
+    .filter-btn:hover {
+      background: linear-gradient(45deg, var(--chocolate-primary), var(--chocolate-secondary));
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+    }
+
+    .navbar .btn {
+      margin-left: 10px;
+
+    /* Override any remaining blue colors */
+    .btn-outline-primary {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      border: none !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-primary:hover {
+      background: linear-gradient(45deg, var(--chocolate-primary), var(--chocolate-secondary)) !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-secondary {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      border: none !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-info {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      border: none !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-warning {
+      background: linear-gradient(45deg, var(--chocolate-secondary), var(--chocolate-primary)) !important;
+      border: none !important;
+      color: var(--cream) !important;
+    }
+
+    .btn-outline-danger {
+      background: linear-gradient(45deg, #e74c3c, #c0392b) !important;
+      border: none !important;
+      color: white !important;
+    }
+
+    .btn-outline-success {
+      background: linear-gradient(45deg, #27ae60, #2ecc71) !important;
+      border: none !important;
+      color: white !important;
+    }
+  </style>
+ </head>
+ <body {% if request.resolver_match.url_name == 'home' %}class="home-page"{% endif %}>
+
+ <!-- Top Utility Bar -->
+ <section class="topbar py-1">
+   <div class="container-fluid d-flex align-items-center justify-content-center">
+     <div class="text-center fw-bold" style="color: var(--chocolate-primary); font-size: 1.1rem; letter-spacing: 0.3px;">
+       Just one click away from the richest, smoothest, most indulgent chocolate decision you'll make today.
+     </div>
+   </div>
+ </section>
+
+ <!-- 🍫 NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <span class="chocolate-icon">🍫</span>
+      <span class="brand-name">GourmetGrove</span>
+    </a>
+
+    <div class="collapse navbar-collapse">
+      <div class="d-flex w-100 justify-content-center">
+        <ul class="navbar-nav align-items-center" style="margin-left: -220px;">
+          <li class="nav-item position-static">
+            <a href="#" id="shopAllToggle" class="nav-link fw-semibold">Shop All ▾</a>
+          <!-- Mega Dropdown -->
+          <div id="megaDropdown" class="mega-dropdown d-none">
+            <div class="container py-4">
+              <div class="row">
+                <!-- Tabs -->
+                <div class="col-12 col-md-3 mb-3 mb-md-0">
+                  <ul class="list-unstyled mega-tabs">
+                    <li><button class="mega-tab active" data-target="#tabTopBrands">Top Brands</button></li>
+                    <li><button class="mega-tab" data-target="#tabAllBrands">All Brands</button></li>
+                    <li><button class="mega-tab" data-target="#tabTypes">Types</button></li>
+                  </ul>
+                </div>
+                <!-- Content -->
+                <div class="col-12 col-md-9">
+                  <!-- Top Brands: logos grid -->
+                  <div id="tabTopBrands" class="mega-pane active">
+                    <div class="row g-3">
+                      {% for b in brands_top %}
+                        <div class="col-6 col-sm-4 col-md-3">
+                          <a class="brand-card" href="{% url 'home' %}?brand={{ b.id }}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}{% if request.GET.order %}&order={{ request.GET.order }}{% endif %}">
+                            {% if b.image %}
+                              <img src="{{ b.image.url }}" alt="{{ b.name }}" class="img-fluid rounded shadow-sm" />
+                            {% else %}
+                              <div class="brand-fallback">{{ b.name }}</div>
+                            {% endif %}
+                          </a>
+                        </div>
+                      {% empty %}
+                        <div class="col-12 text-muted">No top brands yet.</div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <!-- All Brands: multi-column buttons -->
+                  <div id="tabAllBrands" class="mega-pane">
+                    <div class="row g-2">
+                      {% for b in brands_all %}
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                          <a class="btn btn-outline-secondary w-100" href="{% url 'home' %}?brand={{ b.id }}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}{% if request.GET.order %}&order={{ request.GET.order }}{% endif %}">{{ b.name }}</a>
+                        </div>
+                      {% empty %}
+                        <div class="col-12 text-muted">No brands found.</div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <!-- Types: categories list -->
+                  <div id="tabTypes" class="mega-pane">
+                    <div class="row g-2">
+                      {% for cat in categories %}
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                          <a class="btn btn-outline-secondary w-100" href="{% url 'home' %}?category={{ cat.id }}{% if request.GET.sort %}&sort={{ request.GET.sort }}{% endif %}{% if request.GET.order %}&order={{ request.GET.order }}{% endif %}">{{ cat.name }}</a>
+                        </div>
+                      {% empty %}
+                        <div class="col-12 text-muted">No types yet.</div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </li>
+        </ul>
+        
+        <!-- Right side: icons -->
+        <div class="d-flex justify-content-end" style="position: absolute; right: 1rem;">
+          <ul class="navbar-nav align-items-center">
+        {% if user.is_authenticated %}
+          {% if user.is_staff %}
+            <!-- Admin: Cart | Manage | Add | Profile -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cart' %}" title="Cart">🛒 {% if cart_count %}<span class="badge bg-danger">{{ cart_count }}</span>{% endif %}</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="addDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">➕ Add</a>
+              <ul class="dropdown-menu" aria-labelledby="addDropdown">
+                <li><a class="dropdown-item" href="{% url 'add_product' %}">Add Item</a></li>
+                <li><a class="dropdown-item" href="{% url 'add_brand' %}">Add Brand</a></li>
+                <li><a class="dropdown-item" href="{% url 'add_category' %}">Add Category</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle position-relative" href="#" id="manageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Manage">🛠️ Manage
+                {% if notification_unread_count and notification_unread_count > 0 %}
+                  <span class="badge bg-danger ms-1">{{ notification_unread_count }}</span>
+                {% endif %}
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="manageDropdown">
+                <li><a class="dropdown-item" href="{% url 'manage_orders' %}">Manage Orders</a></li>
+                <li><a class="dropdown-item" href="{% url 'coupons_manage' %}">Manage Coupons</a></li>
+                <li><a class="dropdown-item" href="{% url 'notifications' %}">Manage Returns</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Profile">👤</a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger confirm-logout" href="#" data-logout-url="{% url 'logout' %}" data-username="{{ user.username }}">Logout</a></li>
+              </ul>
+            </li>
+          {% else %}
+            <!-- Regular user: Icons only -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cart' %}" title="Cart">🛒 {% if cart_count %}<span class="badge bg-danger">{{ cart_count }}</span>{% endif %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="{% url 'notifications' %}" title="Notifications">🔔
+                {% if notification_unread_count and notification_unread_count > 0 %}
+                  <span class="badge bg-danger position-absolute translate-middle" style="top: 2px;">{{ notification_unread_count }}</span>
+                {% endif %}
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Profile">👤</a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown2">
+                <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger confirm-logout" href="#" data-logout-url="{% url 'logout' %}" data-username="{{ user.username }}">Logout</a></li>
+              </ul>
+            </li>
+          {% endif %}
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+        {% endif %}
+        
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+ 
+
+<!-- 🌟 Page Content -->
+<div class="container mt-4">
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+    {% endfor %}
+  {% endif %}
+  
+  {% block content %}
+  {% endblock %}
+</div>
+
+<!-- Chatbot -->
+
+<!-- Footer - Only show on home page -->
+{% if request.resolver_match.url_name == 'home' %}
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5><i class="fas fa-cookie-bite"></i> GourmetGrove</h5>
+          <div class="footer-contact">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:imzee.shk@gmail.com">imzee.shk@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="https://wa.me/918452991546">+91 8452991546</a></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Types</h5>
+          {% for cat in categories %}
+          <a href="{% url 'home' %}?category={{ cat.id }}" class="footer-btn d-block mb-2">
+            {{ cat.name }}
+          </a>
+          {% endfor %}
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Useful Links</h5>
+          <a href="{% url 'about_us' %}" class="footer-btn">About Us</a>
+          <a href="{% url 'terms_of_use' %}" class="footer-btn">Terms of Use</a>
+          <a href="{% url 'privacy_policy' %}" class="footer-btn">Privacy Policy</a>
+          <a href="{% url 'return_policy' %}" class="footer-btn">Return Policy</a>
+          <a href="{% url 'shipping_policy' %}" class="footer-btn">Shipping Policy</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Get in Touch</h5>
+          <a href="{% url 'contact' %}" class="footer-btn d-block mb-2">
+            <i class="fas fa-envelope"></i> Contact Us
+          </a>
+          <a href="https://wa.me/919967876726" target="_blank" class="footer-btn d-block">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  {% endif %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Load page functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    // Handle sort dropdown
+    updateSortButton();
+
+    // Handle logout confirmation for any logout link
+    document.querySelectorAll('.confirm-logout').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const username = this.getAttribute('data-username') || 'this user';
+        const logoutUrl = this.getAttribute('data-logout-url');
+        if (confirm(`Are you sure you want to logout, ${username}?`)) {
+          window.location.href = logoutUrl;
+        }
+      });
+    });
+
+  });
+
+  // Update sort button text based on current selection
+  function updateSortButton() {
+    const sortBtn = document.getElementById('sortBtn');
+    const urlParams = new URLSearchParams(window.location.search);
+    const sort = urlParams.get('sort');
+    const order = urlParams.get('order');
+    if (sortBtn && sort && order) {
+      const sortText = getSortDisplayText(sort, order);
+      sortBtn.innerHTML = `Sort: ${sortText} ▼`;
+      const sortDropdown = document.getElementById('sortDropdown');
+      if (sortDropdown) {
+        const activeLink = sortDropdown.querySelector(`[data-sort="${sort}_${order}"]`);
+        if (activeLink) activeLink.classList.add('active-sort');
+      }
+    }
+  }
+
+  // Get display text for sort options
+  function getSortDisplayText(sort, order) {
+    const sortMap = {
+      'name_asc': 'A-Z',
+      'name_desc': 'Z-A',
+      'price_asc': 'Low to High',
+      'price_desc': 'High to Low',
+      'sales_desc': 'Most Popular',
+      'rating_desc': 'Highest Rated'
+    };
+    return sortMap[`${sort}_${order}`] || 'Default';
+  }
+
+  // Tab visibility: alternate two messages when away, restore when back
+  (function() {
+    const originalTitle = document.title || 'GourmetGrove';
+    const messages = [
+      '👋 Come back',
+      '⏳ Hurry We\'re selling out fast'
+    ];
+    let idx = 0;
+    let ticker = null;
+
+    function startTicker() {
+      if (ticker) return;
+      // Immediately set first message
+      document.title = messages[idx % messages.length];
+      ticker = setInterval(() => {
+        idx = (idx + 1) % messages.length;
+        document.title = messages[idx];
+      }, 1500); // change every 1.5s
+    }
+
+    function stopTicker() {
+      if (ticker) {
+        clearInterval(ticker);
+        ticker = null;
+      }
+      document.title = originalTitle;
+    }
+
+    function handleVisibility() {
+      if (document.hidden) {
+        startTicker();
+      } else {
+        stopTicker();
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibility);
+    // Also guard on window focus/blur
+    window.addEventListener('blur', startTicker);
+    window.addEventListener('focus', stopTicker);
+  })();
+
+  // --- Mega dropdown logic ---
+  (function() {
+    const toggle = document.getElementById('shopAllToggle');
+    const menu = document.getElementById('megaDropdown');
+    if (!toggle || !menu) return;
+
+    function openMenu() { menu.classList.remove('d-none'); }
+    function closeMenu() { menu.classList.add('d-none'); }
+
+    toggle.addEventListener('click', function(e){
+      e.preventDefault();
+      if (menu.classList.contains('d-none')) openMenu(); else closeMenu();
+    });
+
+    // Tabs
+    const tabs = menu.querySelectorAll('.mega-tab');
+    tabs.forEach(btn => btn.addEventListener('click', () => {
+      tabs.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const panes = menu.querySelectorAll('.mega-pane');
+      panes.forEach(p => p.classList.remove('active'));
+      const target = menu.querySelector(btn.getAttribute('data-target'));
+      if (target) target.classList.add('active');
+    }));
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  })();
+</script>
+
+<style>
+  .filter-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%);
+    min-width: 180px;
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+    margin-top: 5px;
+    border: 2px solid var(--chocolate-light);
+  }
+
+  .dropdown-content a {
+    color: var(--chocolate-primary);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(222, 184, 135, 0.2);
+  }
+
+  .dropdown-content a:hover {
+    background: linear-gradient(135deg, var(--chocolate-light) 0%, var(--caramel) 100%);
+    color: var(--cream);
+    transform: scale(1.02);
+  }
+
+  .dropdown-content a.active {
+    background: linear-gradient(135deg, var(--chocolate-secondary) 0%, var(--chocolate-primary) 100%);
+    color: var(--cream);
+  }
+
+  .filter-dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Active state for sort options */
+  .dropdown-content a.active-sort {
+    background: linear-gradient(135deg, var(--chocolate-secondary) 0%, var(--chocolate-primary) 100%);
+    color: var(--cream);
+  }
+
+  /* Mega dropdown styles */
+  .mega-dropdown {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 68px; /* approx navbar height */
+    background: var(--bg-secondary);
+    border-top: 2px solid var(--chocolate-light);
+    border-bottom: 2px solid var(--chocolate-light);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.25);
+    z-index: 1050;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .mega-tabs .mega-tab {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    border-left: 3px solid transparent;
+  }
+  .mega-tabs .mega-tab.active { border-left-color: var(--chocolate-secondary); font-weight: 600; }
+
+  .mega-pane { display: none; }
+  .mega-pane.active { display: block; }
+
+  .brand-card { display: block; text-decoration: none; }
+  .brand-fallback { background: var(--cream); border: 1px dashed var(--chocolate-light); padding: 18px; border-radius: 8px; text-align: center; font-weight: 600; color: var(--text-primary); }
+
+  /* Profile dropdown (and any navbar dropdown) */
+  .navbar .dropdown-menu {
+    background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%);
+    border: 2px solid var(--chocolate-light);
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(139, 69, 19, 0.25);
+    overflow: hidden;
+    padding: 6px 0;
+    min-width: 200px;
+  }
+  .navbar .dropdown-item {
+    color: var(--chocolate-primary);
+    padding: 10px 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(222, 184, 135, 0.25);
+  }
+  .navbar .dropdown-item:last-child { border-bottom: none; }
+  .navbar .dropdown-item:hover,
+  .navbar .dropdown-item:focus {
+    background: linear-gradient(135deg, var(--chocolate-light) 0%, var(--caramel) 100%);
+    color: var(--cream);
+    transform: translateX(2px);
+  }
+  .navbar .dropdown-item.text-danger { color: #c0392b; }
+  .navbar .dropdown-item.text-danger:hover { color: #fff; }
+  .navbar .dropdown-divider {
+    margin: 0;
+    border-top: 1px solid rgba(222, 184, 135, 0.35);
+  }
+</style>
+
+  <!-- Floating Chatbot -->
+  <!-- Chatbot CSS -->
+  <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <!-- Chatbot HTML -->
+  <div id="chatbot-container" class="chatbot-container" style="opacity: 0; visibility: hidden; display: none;">
+    <div class="chatbot-header">
+      <span>GourmetGrove Assistant</span>
+      <div class="chatbot-actions">
+        <button id="chatbot-close" class="chatbot-close-btn" aria-label="Close chatbot">
+          <i class="fas fa-times"></i>
+        </button>
+        <button id="minimize-chat"><i class="fas fa-minus"></i></button>
+        <button id="close-chat"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+    <div class="chat-messages"></div>
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+      <button id="send-message">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+  <button id="chatbot-toggle" class="chatbot-toggle">
+    <i class="fas fa-comment-dots"></i>
+  </button>
+
+  <!-- Chatbot JavaScript -->
+  <script src="{% static 'js/chatbot.js' %}"></script>
+</body>
+</html>

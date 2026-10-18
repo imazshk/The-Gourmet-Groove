@@ -1,0 +1,20 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Select vendor for new store" %}{% endblock %}
+
+{% block content %}
+  <div class="module">
+    <h2>{% trans "Select vendor for new store" %}</h2>
+    <p>{% trans "Choose a vendor. You'll then add the store details without a vendor dropdown." %}</p>
+    <ul>
+      {% for v in vendors %}
+        <li>
+          <a href="{% url add_url_name %}?vendor={{ v.pk }}">{{ v.name }}</a>
+        </li>
+      {% empty %}
+        <li>{% trans "No vendors available." %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

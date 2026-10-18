@@ -1,0 +1,6 @@
+Django==5.2.4
+requests==2.34.2
+reportlab==5.0.1
+Pillow==12.3.0
+gunicorn==26.2.0
+whitenoise==6.12.0

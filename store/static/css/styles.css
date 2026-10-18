@@ -1,0 +1,295 @@
+/* CSS Variables for theming */
+:root {
+  --bg-primary: #FFF5E6;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #3E2723;
+  --text-secondary: #5D4037;
+  --border-color: #D7CCC8;
+  --card-bg: #FFFFFF;
+  --navbar-bg: #3E2723;
+  --navbar-text: #FFFFFF;
+  --chocolate-card-bg: #FFF9F0;
+  --chocolate-card-border: #D7CCC8;
+  --chocolate-card-shadow: rgba(62, 39, 35, 0.1);
+  --product-detail-bg: #FFF9F0;
+  --product-detail-shadow: rgba(62, 39, 35, 0.15);
+  --chocolate-primary: #5D4037;
+  --chocolate-secondary: #8D6E63;
+  --chocolate-light: #D7CCC8;
+  --chocolate-dark: #3E2723;
+  --cream: #FFF9F0;
+  --caramel: #D2691E;
+  --gold: #D4AF37;
+  --milk-chocolate: #7B3F00;
+  --dark-chocolate: #3E2723;
+  --white-chocolate: #F5F5DC;
+}
+
+/* Base font stack with emoji support */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 .895 2 2 2zm56-76c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d7ccc8' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* Enhanced emoji support */
+.emoji, .chocolate-icon, [role="img"], [data-emoji] {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "Symbola", sans-serif !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 1.2em !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  vertical-align: middle !important;
+}
+
+/* Only apply flex layout on home page for footer positioning */
+body.home-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top utility bar */
+.topbar {
+  background: linear-gradient(135deg, var(--cream) 0%, var(--bg-secondary) 100%);
+  border-bottom: 1px solid var(--chocolate-light);
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.topbar .navbar-brand {
+  color: var(--chocolate-primary) !important;
+}
+
+.topbar a {
+  color: var(--navbar-text) !important;
+  text-decoration: none;
+}
+
+.topbar a:hover {
+  color: var(--chocolate-secondary) !important;
+}
+
+.topbar .badge {
+  transform: translateY(-1px);
+}
+
+.navbar {
+  background: linear-gradient(135deg, var(--chocolate-dark) 0%, var(--chocolate-primary) 100%) !important;
+  border-bottom: 3px solid var(--gold) !important;
+  box-shadow: 0 4px 20px rgba(93, 64, 55, 0.4);
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  color: var(--gold) !important;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  letter-spacing: 1px;
+  padding: 0.25rem 0;
+}
+
+.nav-link {
+  color: var(--cream) !important;
+  font-weight: 500;
+  padding: 0.8rem 1rem !important;
+  margin: 0 0.2rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.nav-link.text-danger {
+  color: #ff6b6b !important;
+  font-weight: 600;
+}
+
+.nav-link.text-danger:hover {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--chocolate-dark);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+  
+  .nav-link {
+    margin: 0.2rem 0;
+  }
+}
+
+/* Footer styles */
+.footer {
+  background: var(--chocolate-dark);
+  color: white;
+  padding: 3rem 0 1.5rem;
+  margin-top: auto;
+}
+
+.footer a {
+  color: var(--cream);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.footer h5 {
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Utility classes */
+.bg-light {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--cream) 100%) !important;
+}
+
+.text-muted {
+  color: var(--chocolate-secondary) !important;
+}
+
+.border-bottom {
+  border-bottom-color: var(--chocolate-light) !important;
+}
+
+/* Card styles */
+.card {
+  background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%) !important;
+  border: 2px solid var(--chocolate-light) !important;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(139, 69, 19, 0.2);
+}
+
+/* Form controls */
+.form-control:focus {
+  background: linear-gradient(145deg, var(--card-bg) 0%, var(--cream) 100%) !important;
+  border: 2px solid var(--chocolate-secondary) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 0 15px rgba(139, 69, 19, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--chocolate-primary);
+  border-color: var(--chocolate-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--chocolate-dark);
+  border-color: var(--chocolate-dark);
+}
+
+.btn-outline-primary {
+  color: var(--chocolate-primary);
+  border-color: var(--chocolate-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--chocolate-primary);
+  border-color: var(--chocolate-primary);
+}
+
+/* Alert messages */
+.alert {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.alert-success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.alert-danger {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 0.25rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--chocolate-primary);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive images */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: none;
+    color: #000;
+  }
+  
+  .container {
+    width: auto;
+    max-width: 100%;
+    padding: 0;
+  }
+}

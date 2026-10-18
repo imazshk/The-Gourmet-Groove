@@ -1,0 +1,176 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+
+<style>
+  body { background: #fdf6f0; }
+  
+  .delete-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .delete-header {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .delete-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .delete-body {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .product-image {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 20px auto;
+    background: #f8f9fa;
+    display: block;
+  }
+
+  .product-name {
+    font-size: 1.5rem;
+    color: #4b2e2e;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .warning-message {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .delete-confirm-btn {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .delete-confirm-btn:hover {
+    background: linear-gradient(45deg, #c0392b, #a93226);
+    transform: scale(1.05);
+  }
+
+  .cancel-btn {
+    background: #6c757d;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .cancel-btn:hover {
+    background: #5a6268;
+    color: white;
+    text-decoration: none;
+  }
+
+  .back-btn {
+    background: #6c757d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .back-btn:hover {
+    background: #5a6268;
+    color: white;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .delete-body {
+      padding: 20px;
+    }
+    
+    .button-group {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="container">
+  <a href="{% url 'product_detail' chocolate.pk %}" class="back-btn">
+    ← Back to Product
+  </a>
+
+  <div class="delete-container">
+    <div class="delete-header">
+      <h1>🗑️ Delete Product</h1>
+    </div>
+    
+    <div class="delete-body">
+      {% if chocolate.image %}
+        <img src="{{ chocolate.image.url }}" alt="{{ chocolate.name }}" class="product-image">
+      {% endif %}
+      
+      <div class="product-name">{{ chocolate.name }}</div>
+      <div class="product-price">₹{{ chocolate.price }}</div>
+      
+      <div class="warning-message">
+        <strong>⚠️ Warning:</strong> Are you sure you want to delete this product? 
+        This action cannot be undone.
+      </div>
+      
+      <form method="post">
+        {% csrf_token %}
+        <div class="button-group">
+          <button type="submit" class="btn delete-confirm-btn">
+            🗑️ Yes, Delete Product
+          </button>
+          <a href="{% url 'product_detail' chocolate.pk %}" class="btn cancel-btn">
+            ❌ Cancel
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %} 

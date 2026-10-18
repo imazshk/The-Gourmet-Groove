@@ -1,0 +1,115 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+  <h2>Your Cart 🛒</h2>
+  {% csrf_token %}
+
+  {% if cart_items %}
+    <div class="card">
+      <div class="card-body">
+        {% for item in cart_items %}
+          <div class="d-flex justify-content-between align-items-center mb-3 p-3 border rounded">
+            <div class="d-flex align-items-center">
+              <img src="{{ item.chocolate.image.url }}" alt="{{ item.chocolate.name }}" 
+                   style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;" class="me-3">
+              <div>
+                <h6 class="mb-1">{{ item.chocolate.name }}</h6>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-sm btn-chocolate me-2 quantity-btn" data-item-id="{{ item.pk }}" data-action="decrease" style="background: #8B4513; color: white; border: none;">-</button>
+                  <span class="quantity-display me-2" id="quantity-{{ item.pk }}" style="min-width: 20px; text-align: center;">{{ item.quantity }}</span>
+                  <button class="btn btn-sm btn-chocolate me-2 quantity-btn" data-item-id="{{ item.pk }}" data-action="increase" style="background: #8B4513; color: white; border: none;">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="badge rounded-pill me-3" id="total-{{ item.pk }}">₹{{ item.total_price }}</span>
+              <a href="{% url 'save_for_later' item.pk %}" class="btn btn-sm me-2" style="background: #D2691E; color: white; border: none;">
+                💾 Save for Later
+              </a>
+              <a href="{% url 'remove_from_cart' item.pk %}" class="btn btn-sm" style="background: #8B0000; color: white; border: none;">
+                🗑️ Remove
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+        
+        <hr>
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Total:</h5>
+          <h5 class="mb-0" id="cart-total">₹{{ total }}</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <a href="{% url 'checkout' %}" class="btn btn-lg" style="background: #2E8B57; color: white; border: none;">🚀 Proceed to Checkout</a>
+      <a href="{% url 'home' %}" class="btn btn-lg ms-2" style="background: #A0522D; color: white; border: none;">🛍️ Continue Shopping</a>
+      <a href="{% url 'wishlist' %}" class="btn btn-lg ms-2" style="background: #D2691E; color: white; border: none;">❤️ Wishlist</a>
+      <button class="btn btn-lg ms-2" style="background: #8B4513; color: white; border: none;" onclick="shareCart()">📤 Share Cart</button>
+    </div>
+  {% else %}
+    <div class="text-center py-5">
+      <h4 class="text-muted">Your cart is empty</h4>
+      <p class="text-muted">Add some delicious chocolates to your cart!</p>
+      <a href="{% url 'home' %}" class="btn btn-lg" style="background: #A0522D; color: white; border: none;">Continue Shopping</a>
+      <a href="{% url 'wishlist' %}" class="btn btn-lg ms-2" style="background: #D2691E; color: white; border: none;">❤️ Wishlist</a>
+    </div>
+  {% endif %}
+
+  <script>
+  // Function to update quantity
+  function updateQuantity(itemId, action) {
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    fetch(`/update-cart-quantity/${itemId}/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrfToken
+      },
+      body: JSON.stringify({action: action})
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        document.getElementById(`quantity-${itemId}`).textContent = data.quantity;
+        document.getElementById(`total-${itemId}`).textContent = `₹${data.total_price}`;
+        document.getElementById('cart-total').textContent = `₹${data.cart_total}`;
+      } else if (data.status === 'removed') {
+        location.reload();
+      }
+    })
+    .catch(error => console.error('Error:', error));
+  };
+
+  // Add event listeners to quantity buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.quantity-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const itemId = this.dataset.itemId;
+        const action = this.dataset.action;
+        updateQuantity(itemId, action);
+      });
+    });
+
+    window.shareCart = function() {
+      const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+      fetch('/share-cart/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': csrfToken
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.share_url) {
+          navigator.clipboard.writeText(data.share_url).then(() => {
+            alert('Cart link copied to clipboard!');
+          });
+        }
+      })
+      .catch(error => console.error('Error:', error));
+    };
+  });
+  </script>
+{% endblock %}

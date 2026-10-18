@@ -1,0 +1,61 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center mb-4" style="color: var(--chocolate-primary); font-weight: bold;">Privacy Policy – GourmetGrove</h1>
+          
+          <div class="text-center mb-4">
+            <i class="fas fa-shield-alt" style="color: var(--chocolate-secondary); font-size: 3rem;"></i>
+          </div>
+          
+          <p class="lead mb-4">
+            At GourmetGrove, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you shop on our website.
+          </p>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">1. Information We Collect</h3>
+          <p>We may collect the following information when you place an order or interact with our site:</p>
+          <ul>
+            <li>Name, shipping address, billing address</li>
+            <li>Contact details (email, phone number)</li>
+            <li>Payment information (processed securely through our payment partners)</li>
+            <li>Order history and preferences</li>
+          </ul>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">2. How We Use Your Information</h3>
+          <p>We use your data to:</p>
+          <ul>
+            <li>Process and deliver your orders</li>
+            <li>Provide customer service and respond to queries</li>
+            <li>Send updates, offers, and promotions (with your consent)</li>
+            <li>Improve our website and product selection</li>
+          </ul>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">3. Sharing Your Information</h3>
+          <p>We only share your details with trusted partners like payment gateways and delivery services, strictly for fulfilling your order. We never sell or rent your personal data.</p>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">4. Security</h3>
+          <p>Your information is protected through secure encryption and industry-standard security measures. However, no system is 100% secure, so we encourage you to safeguard your login details.</p>
+          
+          <h3 style="color: var(--chocolate-secondary); margin-top: 2rem;">5. Contact Us</h3>
+          <p>For privacy-related questions, contact:</p>
+          <div class="bg-light p-3 rounded">
+            <p><i class="fas fa-map-marker-alt"></i> GourmetGrove, [Your Address]</p>
+            <p><i class="fas fa-envelope"></i> Email: support@themunchloom.com</p>
+            <p><i class="fas fa-phone"></i> Phone: +918452991546</p>
+          </div>
+          
+          <div class="text-center mt-5">
+            <a href="{% url 'home' %}" class="btn btn-primary">
+              <i class="fas fa-home"></i> Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,3054 @@
+[
+ {
+  "model": "store.category",
+  "pk": 1,
+  "fields": {
+   "name": "Chewing Gums"
+  }
+ },
+ {
+  "model": "store.category",
+  "pk": 2,
+  "fields": {
+   "name": "Candy"
+  }
+ },
+ {
+  "model": "store.category",
+  "pk": 3,
+  "fields": {
+   "name": "Jelly"
+  }
+ },
+ {
+  "model": "store.category",
+  "pk": 4,
+  "fields": {
+   "name": "Chocolates"
+  }
+ },
+ {
+  "model": "store.category",
+  "pk": 5,
+  "fields": {
+   "name": "White Chocolates"
+  }
+ },
+ {
+  "model": "store.category",
+  "pk": 6,
+  "fields": {
+   "name": "Dark Chocolates"
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 1,
+  "fields": {
+   "name": "Ferrero Rochers",
+   "image": "brands/Screenshot_2025-08-14_014048.png",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 2,
+  "fields": {
+   "name": "Godiva",
+   "image": "brands/Screenshot_2025-08-14_024256.png",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 3,
+  "fields": {
+   "name": "Toblerone",
+   "image": "brands/Screenshot_2025-08-14_024248.png",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 4,
+  "fields": {
+   "name": "Milka",
+   "image": "brands/Screenshot_2025-08-14_024241.png",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 5,
+  "fields": {
+   "name": "Cadbury",
+   "image": "brands/Screenshot_2025-08-14_024230.png",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 6,
+  "fields": {
+   "name": "Lindt",
+   "image": "brands/Screenshot_2025-08-14_030133.png",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 7,
+  "fields": {
+   "name": "Amul Chocolate",
+   "image": "brands/Amul.jpg",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 8,
+  "fields": {
+   "name": "Allen's",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 9,
+  "fields": {
+   "name": "Bubble Gum Bubble Yum",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 10,
+  "fields": {
+   "name": "Fruit Grushers",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 11,
+  "fields": {
+   "name": "Ghirardelli",
+   "image": "brands/images.png",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 12,
+  "fields": {
+   "name": "Haribo",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 13,
+  "fields": {
+   "name": "Hershey",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 14,
+  "fields": {
+   "name": "Hubba Bubba",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 15,
+  "fields": {
+   "name": "Jelly Belly",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 16,
+  "fields": {
+   "name": "Kit Kat",
+   "image": "brands/images.jpg",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 17,
+  "fields": {
+   "name": "M&M's",
+   "image": "brands/mm.jpg",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 18,
+  "fields": {
+   "name": "Orbit",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 19,
+  "fields": {
+   "name": "Skittles",
+   "image": "brands/Skittles.jpg",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 20,
+  "fields": {
+   "name": "Sour Patch",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 21,
+  "fields": {
+   "name": "Starburst",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 22,
+  "fields": {
+   "name": "Tootsie Roll",
+   "image": "",
+   "is_top": false
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 23,
+  "fields": {
+   "name": "Werther's Original",
+   "image": "brands/werthers_Orginal.jpg",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.brand",
+  "pk": 25,
+  "fields": {
+   "name": "Perugina",
+   "image": "brands/Perugina.webp",
+   "is_top": true
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 1,
+  "fields": {
+   "name": "Lindt Dark Chocolate",
+   "description": "Lindt Dark Chocolate is expertly crafted by Swiss Master Chocolatiers using the finest cocoa beans. With its smooth texture, deep cocoa flavor, and balanced bitterness, it’s a luxurious treat for dark chocolate enthusiasts.",
+   "image": "chocolates/Lindt_Dark_Chocolate.jpg",
+   "price": "500.00",
+   "file": "downloads/Lindt_Dark_Chocolate.jpg",
+   "tags": "Okay",
+   "category": 6,
+   "brand": 6,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T15:57:57.480Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 2,
+  "fields": {
+   "name": "Amul Dark Chocolate",
+   "description": "Amul Dark Chocolate is made from rich, high-quality cocoa and offers a bold, intense flavor with a smooth, velvety texture. Perfect for those who enjoy the deep, satisfying taste of real dark chocolate.",
+   "image": "chocolates/Amul_Dark_Chocolate.jpg",
+   "price": "190.00",
+   "file": "downloads/Amul_Dark_Chocolate.jpg",
+   "tags": "Okay",
+   "category": 6,
+   "brand": 7,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 2,
+   "created_at": "2025-07-20T15:59:25.585Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 3,
+  "fields": {
+   "name": "Ghirardelli Dark Chocolate",
+   "description": "Ghirardelli Dark Chocolate delivers an intense, velvety-smooth cocoa experience made from premium ingredients. Crafted in San Francisco tradition, each bite offers rich flavor and a perfectly balanced bitterness for true chocolate connoisseurs.",
+   "image": "chocolates/Ghirardelli_Dark_Chocolate.jpg",
+   "price": "900.00",
+   "file": "downloads/Ghirardelli_Dark_Chocolate.jpg",
+   "tags": "Okay",
+   "category": 6,
+   "brand": 11,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 1,
+   "created_at": "2025-07-20T16:01:26.230Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 4,
+  "fields": {
+   "name": "Godiva Dark Chocolate",
+   "description": "Godiva Dark Chocolate is a premium indulgence crafted with the finest ingredients, offering a rich, velvety texture and bold cocoa flavor. Perfectly balanced and elegantly smooth, it's a sophisticated treat for true chocolate connoisseurs.",
+   "image": "chocolates/Godiva_Dark_Chocolate.jpeg",
+   "price": "800.00",
+   "file": "downloads/Godiva_Dark_Chocolate.jpeg",
+   "tags": "Okay",
+   "category": 6,
+   "brand": 2,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 1,
+   "created_at": "2025-07-20T16:02:48.479Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 5,
+  "fields": {
+   "name": "Perugina Dark Chocolate",
+   "description": "Perugina Dark Chocolate is a premium Italian chocolate crafted with rich cocoa and a tradition of excellence. Known for its smooth texture and intense flavor, it offers a refined and indulgent experience for true dark chocolate lovers.",
+   "image": "chocolates/Perugina_Dark_Chocolate.jpeg",
+   "price": "2500.00",
+   "file": "downloads/Perugina_Dark_Chocolate.jpeg",
+   "tags": "Okay",
+   "category": 6,
+   "brand": 25,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T16:31:30.619Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 6,
+  "fields": {
+   "name": "Lindt White Chocolate",
+   "description": "Lindt White Chocolate is a creamy, velvety-smooth indulgence crafted by Swiss Master Chocolatiers. Made with the finest ingredients, it offers a delicate sweetness and rich, melt-in-your-mouth texture that’s perfect for moments of pure delight.",
+   "image": "chocolates/Lindt_White_Chocolate.jpg",
+   "price": "840.00",
+   "file": "downloads/Lindt_White_Chocolate.jpg",
+   "tags": "Okay",
+   "category": 5,
+   "brand": 6,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T16:44:21.022Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 7,
+  "fields": {
+   "name": "Ghirardelli White Chocolate",
+   "description": "Ghirardelli White Chocolate delivers a luxuriously creamy texture and smooth, buttery flavor. Crafted with premium ingredients, this rich white chocolate offers an indulgent experience perfect for baking, snacking, or gifting.",
+   "image": "chocolates/Ghirardelli_White_Chocolate.jpg",
+   "price": "1200.00",
+   "file": "downloads/Ghirardelli_White_Chocolate.jpg",
+   "tags": "Okay",
+   "category": 5,
+   "brand": 11,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 2,
+   "created_at": "2025-07-20T16:47:39.578Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 8,
+  "fields": {
+   "name": "Godiva White Chocolate",
+   "description": "Godiva White Chocolate is a decadent, ultra-smooth treat crafted with the finest ingredients. Its creamy texture and delicate sweetness offer a luxurious chocolate experience, perfect for savoring or gifting.",
+   "image": "chocolates/Godiva_White_Chocolate.jpeg",
+   "price": "550.00",
+   "file": "downloads/Godiva_White_Chocolate.jpeg",
+   "tags": "Okay",
+   "category": 5,
+   "brand": 2,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T16:54:09.723Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 9,
+  "fields": {
+   "name": "Milka White Chocolate",
+   "description": "Milka White Chocolate is a smooth and creamy treat made with Alpine milk and the finest ingredients. Known for its gentle sweetness and melt-in-your-mouth texture, it offers a comforting and indulgent chocolate experience.",
+   "image": "chocolates/Milka_White_Chocolate.jpeg",
+   "price": "150.00",
+   "file": "downloads/Milka_White_Chocolate.jpeg",
+   "tags": "Okay",
+   "category": 5,
+   "brand": 4,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T16:55:56.778Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 10,
+  "fields": {
+   "name": "Cadbury Dream White Chocolate",
+   "description": "Cadbury Dream White Chocolate is a rich, creamy delight made with the finest milk ingredients. With its smooth texture and sweet, velvety flavor, it’s a comforting treat for white chocolate lovers and a true taste of indulgence.",
+   "image": "chocolates/Cadbury_Dream_White_Chocolate.jpeg",
+   "price": "800.00",
+   "file": "downloads/Cadbury_Dream_White_Chocolate.jpeg",
+   "tags": "Okay",
+   "category": 5,
+   "brand": 5,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T16:57:25.454Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 11,
+  "fields": {
+   "name": "Cadbury Dairy Milk",
+   "description": "Cadbury Dairy Milk is a classic milk chocolate bar made with rich, creamy milk for a smooth and indulgent taste. Loved around the world, it delivers the perfect blend of sweetness and melt-in-your-mouth texture in every bite.",
+   "image": "chocolates/Cadbury_Dairy_Milk_Chocolate.jpeg",
+   "price": "100.00",
+   "file": "downloads/Cadbury_Dairy_Milk_Chocolate.jpeg",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 5,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 1,
+   "created_at": "2025-07-20T16:59:11.065Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 12,
+  "fields": {
+   "name": "Hershey's Milk Chocolate Bar",
+   "description": "Hershey’s Milk Chocolate Bar is an American classic, known for its smooth, creamy texture and rich chocolate flavor. Perfect for snacking, baking, or s’mores, it’s a timeless treat loved by generations.",
+   "image": "chocolates/Hersheys_Milk_Chocolate_Bar.jpeg",
+   "price": "280.00",
+   "file": "downloads/Hersheys_Milk_Chocolate_Bar.jpeg",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 13,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 3,
+   "created_at": "2025-07-20T17:00:26.370Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 13,
+  "fields": {
+   "name": "Milka Alpine Milk Chocolate",
+   "description": "Milka Alpine Milk Chocolate is a smooth and creamy treat made with 100% Alpine milk and the finest cocoa. Known for its delicate texture and melt-in-the-mouth richness, it offers a gentle, indulgent chocolate experience loved by all ages.",
+   "image": "chocolates/Milka_Alpine_Milk_Chocolate.jpg",
+   "price": "225.00",
+   "file": "downloads/Milka_Alpine_Milk_Chocolate.jpg",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 4,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T17:02:06.541Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 14,
+  "fields": {
+   "name": "Kit Kat",
+   "description": "Kit Kat is a deliciously crisp wafer bar covered in smooth milk chocolate, offering the perfect balance of crunch and creaminess. With its iconic 'snap,' it's the ideal treat for a quick break or to share with friends.",
+   "image": "chocolates/kitkat.jpeg",
+   "price": "35.00",
+   "file": "downloads/kitkat.jpeg",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 16,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 5,
+   "created_at": "2025-07-20T17:03:06.196Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 15,
+  "fields": {
+   "name": "Amul Milk Chocolate",
+   "description": "Amul Milk Chocolate is a rich and creamy treat made with the goodness of high-quality milk and premium cocoa. Smooth in texture and perfectly sweet, it delivers a satisfying chocolate experience crafted by one of India’s most trusted dairy brands.",
+   "image": "chocolates/Amul_Milk_Chocolate.jpeg",
+   "price": "90.00",
+   "file": "downloads/Amul_Milk_Chocolate.jpeg",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 7,
+   "rating": 5.0,
+   "total_ratings": 1,
+   "total_sales": 14,
+   "created_at": "2025-07-20T17:04:06.256Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 16,
+  "fields": {
+   "name": "Haribo Goldbears",
+   "description": "Haribo Goldbears are the original gummy bears, loved for their chewy texture and fruity flavors. Bursting with sweetness in every bite, these colorful treats have been bringing joy to candy lovers of all ages since 1922.",
+   "image": "chocolates/haribo_gummy_bears.jpeg",
+   "price": "259.99",
+   "file": "downloads/haribo_gummy_bears.jpeg",
+   "tags": "Okay",
+   "category": 3,
+   "brand": 12,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T17:05:47.034Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 17,
+  "fields": {
+   "name": "Jelly Belly Gourmet Jelly Beans",
+   "description": "Jelly Belly Gourmet Jelly Beans are premium, bite-sized candies bursting with true-to-life flavors. With a smooth shell and chewy center, each bean is crafted with high-quality ingredients and available in an exciting variety of over 50 flavors—perfect for snacking, sharing, or gifting.",
+   "image": "chocolates/Jelly_Belly_Gourmet_Jelly_beans.jpg",
+   "price": "360.00",
+   "file": "downloads/Jelly_Belly_Gourmet_Jelly_beans.jpg",
+   "tags": "Okay",
+   "category": 3,
+   "brand": 15,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 1,
+   "created_at": "2025-07-20T17:06:52.193Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 18,
+  "fields": {
+   "name": "Fruit Gushers",
+   "description": "Fruit Gushers are fun, bite-sized snacks with a soft, chewy outer shell and a surprise burst of juicy fruit-flavored filling inside. Bursting with bold flavors and vibrant colors, they’re a favorite treat for kids and nostalgic adults alike.",
+   "image": "chocolates/fruit_gushers.jpeg",
+   "price": "500.00",
+   "file": "downloads/fruit_gushers.jpeg",
+   "tags": "Okay",
+   "category": 3,
+   "brand": 10,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 6,
+   "created_at": "2025-07-20T17:07:43.046Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 19,
+  "fields": {
+   "name": "Allen's Snakes Alive",
+   "description": "Allen’s Snakes Alive are soft, chewy gummy lollies in fun snake shapes and a variety of fruity flavors. Bursting with juicy taste and vibrant colors, they’re a playful and delicious treat loved by kids and adults alike across Australia.",
+   "image": "chocolates/Allens_Snakes_Alive.jpeg",
+   "price": "2200.00",
+   "file": "downloads/Allens_Snakes_Alive.jpeg",
+   "tags": "Okay",
+   "category": 3,
+   "brand": 8,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 8,
+   "created_at": "2025-07-20T17:08:32.118Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 20,
+  "fields": {
+   "name": "Sour Patch",
+   "description": "Sour Patch Kids are soft, chewy candies that start off sour and turn sweet with every bite. With their iconic kid-shaped design and bold fruity flavors, they deliver a fun and tangy snacking experience that candy lovers can’t resist.",
+   "image": "chocolates/Sour_Patch.jpeg",
+   "price": "385.00",
+   "file": "downloads/Sour_Patch.jpeg",
+   "tags": "Okay",
+   "category": 3,
+   "brand": 20,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T17:10:29.976Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 21,
+  "fields": {
+   "name": "Skittles",
+   "description": "Skittles are colorful, bite-sized candies with a crisp shell and a chewy, fruity center. Bursting with bold flavors like strawberry, lemon, orange, green apple, and grape, they invite you to 'Taste the Rainbow' in every handful.",
+   "image": "chocolates/Skittles_lrcZ0cJ.jpg",
+   "price": "100.00",
+   "file": "downloads/Skittles_N4gtUI1.jpg",
+   "tags": "Okay",
+   "category": 2,
+   "brand": 19,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 5,
+   "created_at": "2025-07-20T17:12:07.996Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 22,
+  "fields": {
+   "name": "Starburst Fruit Chews",
+   "description": "Starburst Fruit Chews are soft, juicy candies packed with bold, fruity flavor in every bite. With classic flavors like strawberry, lemon, orange, and cherry, they’re a chewy, vibrant treat that’s perfect for sharing or savoring solo.",
+   "image": "chocolates/Starburst_Fruit_Chews.jpeg",
+   "price": "400.00",
+   "file": "downloads/Starburst_Fruit_Chews.jpeg",
+   "tags": "Okay",
+   "category": 2,
+   "brand": 21,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T17:13:04.547Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 23,
+  "fields": {
+   "name": "M&M's",
+   "description": "M&M’s are iconic bite-sized chocolates with a colorful candy shell and a delicious chocolate center. Whether you love the classic milk chocolate, peanut, or other fun varieties, M&M’s bring a pop of color and a burst of flavor to every moment.",
+   "image": "chocolates/MMs.jpg",
+   "price": "150.00",
+   "file": "downloads/MMs.jpg",
+   "tags": "Okay",
+   "category": 2,
+   "brand": 17,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T17:14:34.994Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 24,
+  "fields": {
+   "name": "Werther's Original Hard Candies",
+   "description": "Werther’s Original Hard Candies are classic, smooth and creamy caramel sweets made with real butter and fresh cream. Lovingly crafted to melt slowly in your mouth, they offer a rich, comforting taste that’s timeless and satisfying.",
+   "image": "chocolates/Werthers_Original_Hard_Candies.jpeg",
+   "price": "900.00",
+   "file": "downloads/Werthers_Original_Hard_Candies.jpeg",
+   "tags": "Okay",
+   "category": 2,
+   "brand": 23,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T17:15:24.068Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 25,
+  "fields": {
+   "name": "Tootsie Roll",
+   "description": "Tootsie Roll is a classic American candy with a unique, chewy texture and a rich, cocoa-infused flavor. Blending the taste of chocolate and taffy, it’s a nostalgic treat that’s been delighting candy lovers for generations.",
+   "image": "chocolates/Tootsie_Roll.jpeg",
+   "price": "1600.00",
+   "file": "downloads/Tootsie_Roll.jpeg",
+   "tags": "Okay",
+   "category": 2,
+   "brand": 22,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T17:16:28.010Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 27,
+  "fields": {
+   "name": "Orbit Chewing Gum",
+   "description": "Orbit gum offers a clean, refreshing chew with long-lasting flavor. Sugar-free and available in a variety of minty and fruity flavors, Orbit is perfect for freshening your breath anytime, anywhere.",
+   "image": "chocolates/Orbit_Chewing_Gum.jpeg",
+   "price": "50.00",
+   "file": "downloads/Orbit_Chewing_Gum.jpeg",
+   "tags": "Okay",
+   "category": 1,
+   "brand": 18,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T17:19:26.647Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 28,
+  "fields": {
+   "name": "Bubble Yum Bubble Gum",
+   "description": "Bubble Yum Bubble Gum is known for its soft, chewy texture and long-lasting flavor—perfect for blowing big, fun bubbles. With its classic taste and playful appeal, it’s a favorite treat for kids and nostalgic adults alike.",
+   "image": "chocolates/Bubble_Yum_Bubble_Gum.jpeg",
+   "price": "3000.00",
+   "file": "downloads/Bubble_Yum_Bubble_Gum.jpeg",
+   "tags": "Okay",
+   "category": 1,
+   "brand": 9,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 2,
+   "created_at": "2025-07-20T17:21:57.501Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 29,
+  "fields": {
+   "name": "Hubba Bubba Max",
+   "description": "Hubba Bubba Max is a bold, bubble-blowing gum with an extra burst of juicy flavor in every piece. Known for its soft chew and fun, fruity combinations, it’s perfect for blowing big bubbles and enjoying a blast of sweetness anytime.",
+   "image": "chocolates/Hubba_Bubba_Max.png",
+   "price": "1000.00",
+   "file": "downloads/Hubba_Bubba_Max.png",
+   "tags": "Okay",
+   "category": 1,
+   "brand": 14,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-07-20T17:23:28.406Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 31,
+  "fields": {
+   "name": "Ferrero Rochers (3 pieces)",
+   "description": "Ferrero Rocher is a premium chocolate confectionery known for its distinctive golden foil wrapping and layered taste experience. Each sphere features a whole roasted hazelnut at its center, surrounded by a smooth hazelnut cream filling, encased in a thin, crisp wafer shell, coated in rich milk chocolate, and sprinkled with chopped hazelnuts. It’s celebrated for its indulgent flavor, elegant presentation, and association with gifting, celebrations, and moments of luxury.",
+   "image": "chocolates/Ferrero_Rocher_3_Piece.avif",
+   "price": "120.00",
+   "file": "",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 1,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-08-13T20:58:27.126Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 32,
+  "fields": {
+   "name": "Ferrero Rochers (8 pieces)",
+   "description": "Ferrero Rocher is a premium chocolate confectionery known for its distinctive golden foil wrapping and layered taste experience. Each sphere features a whole roasted hazelnut at its center, surrounded by a smooth hazelnut cream filling, encased in a thin, crisp wafer shell, coated in rich milk chocolate, and sprinkled with chopped hazelnuts. It’s celebrated for its indulgent flavor, elegant presentation, and association with gifting, celebrations, and moments of luxury.",
+   "image": "chocolates/Ferrero_Rocher_8_Piece.avif",
+   "price": "329.00",
+   "file": "",
+   "tags": "",
+   "category": 4,
+   "brand": 1,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-08-13T21:04:51.266Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 33,
+  "fields": {
+   "name": "Ferrero Rochers (12 pieces)",
+   "description": "Ferrero Rocher is a premium chocolate confectionery known for its distinctive golden foil wrapping and layered taste experience. Each sphere features a whole roasted hazelnut at its center, surrounded by a smooth hazelnut cream filling, encased in a thin, crisp wafer shell, coated in rich milk chocolate, and sprinkled with chopped hazelnuts. It’s celebrated for its indulgent flavor, elegant presentation, and association with gifting, celebrations, and moments of luxury.",
+   "image": "chocolates/Ferrero_Rocher_12_Piece.avif",
+   "price": "450.00",
+   "file": "",
+   "tags": "",
+   "category": 4,
+   "brand": 1,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 1,
+   "created_at": "2025-08-14T04:13:13.756Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 34,
+  "fields": {
+   "name": "Ferrero Rochers (16 pieces)",
+   "description": "Ferrero Rocher is a premium chocolate confectionery known for its distinctive golden foil wrapping and layered taste experience. Each sphere features a whole roasted hazelnut at its center, surrounded by a smooth hazelnut cream filling, encased in a thin, crisp wafer shell, coated in rich milk chocolate, and sprinkled with chopped hazelnuts. It’s celebrated for its indulgent flavor, elegant presentation, and association with gifting, celebrations, and moments of luxury.",
+   "image": "chocolates/Ferrero_Rocher_16_Piece.avif",
+   "price": "589.00",
+   "file": "downloads/Ferrero_Rocher_16_Piece.avif",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 1,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 1,
+   "created_at": "2025-08-14T04:15:37.971Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 35,
+  "fields": {
+   "name": "Ferrero Rochers (16 pieces)",
+   "description": "Ferrero Rocher is a premium chocolate confectionery known for its distinctive golden foil wrapping and layered taste experience. Each sphere features a whole roasted hazelnut at its center, surrounded by a smooth hazelnut cream filling, encased in a thin, crisp wafer shell, coated in rich milk chocolate, and sprinkled with chopped hazelnuts. It’s celebrated for its indulgent flavor, elegant presentation, and association with gifting, celebrations, and moments of luxury.",
+   "image": "chocolates/Ferrero_Rocher_16_Piece_ARJMDzu.avif",
+   "price": "529.00",
+   "file": "downloads/Ferrero_Rocher_16_Piece_88xtmcd.avif",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 1,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-08-14T05:00:33.114Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 36,
+  "fields": {
+   "name": "Ferrero Rochers (18 pieces)",
+   "description": "Ferrero Rocher is a premium chocolate confectionery known for its distinctive golden foil wrapping and layered taste experience. Each sphere features a whole roasted hazelnut at its center, surrounded by a smooth hazelnut cream filling, encased in a thin, crisp wafer shell, coated in rich milk chocolate, and sprinkled with chopped hazelnuts. It’s celebrated for its indulgent flavor, elegant presentation, and association with gifting, celebrations, and moments of luxury.",
+   "image": "chocolates/Ferrero_Rocher_18_Piece.avif",
+   "price": "740.00",
+   "file": "downloads/Ferrero_Rocher_18_Piece.avif",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 1,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 1,
+   "created_at": "2025-08-14T05:14:00.817Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 37,
+  "fields": {
+   "name": "Ferrero Rochers (24 pieces)",
+   "description": "Ferrero Rocher is a premium chocolate confectionery known for its distinctive golden foil wrapping and layered taste experience. Each sphere features a whole roasted hazelnut at its center, surrounded by a smooth hazelnut cream filling, encased in a thin, crisp wafer shell, coated in rich milk chocolate, and sprinkled with chopped hazelnuts. It’s celebrated for its indulgent flavor, elegant presentation, and association with gifting, celebrations, and moments of luxury.",
+   "image": "chocolates/Ferrero_Rocher_24_Piece.avif",
+   "price": "1250.00",
+   "file": "downloads/Ferrero_Rocher_24_Piece.avif",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 1,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-08-14T05:17:13.128Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 38,
+  "fields": {
+   "name": "Ferrero Rochers (48 pieces)",
+   "description": "Ferrero Rocher is a premium chocolate confectionery known for its distinctive golden foil wrapping and layered taste experience. Each sphere features a whole roasted hazelnut at its center, surrounded by a smooth hazelnut cream filling, encased in a thin, crisp wafer shell, coated in rich milk chocolate, and sprinkled with chopped hazelnuts. It’s celebrated for its indulgent flavor, elegant presentation, and association with gifting, celebrations, and moments of luxury.",
+   "image": "chocolates/Ferrero_Rocher_48_Piece.avif",
+   "price": "2500.00",
+   "file": "downloads/Ferrero_Rocher_48_Piece.avif",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 1,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 3,
+   "created_at": "2025-08-14T05:18:00.686Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 39,
+  "fields": {
+   "name": "Toblerone",
+   "description": "Toblerone is a Swiss chocolate bar known for its iconic triangular peaks, inspired by the Alps. It combines smooth milk chocolate with crunchy honey and almond nougat, creating a unique blend of creamy sweetness and nutty texture. Wrapped in its signature yellow packaging, Toblerone has become a classic treat and travel favorite worldwide.",
+   "image": "chocolates/Toblerone_Chocolate.jpg",
+   "price": "200.00",
+   "file": "downloads/Toblerone_Chocolate.jpg",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 3,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-08-22T18:42:48.934Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 40,
+  "fields": {
+   "name": "Toblerone Dark Chocolate",
+   "description": "Toblerone Dark Chocolate is an elegant twist on the classic Toblerone bar, made with rich dark chocolate infused with honey and crunchy almond nougat. It delivers a satisfying balance of bitterness and sweetness, thanks to its deep cocoa profile (typically around 50% cocoa solids), enriched by subtle honey undertones and nutty texture",
+   "image": "chocolates/Toblerone_Dark_Chocolate.webp",
+   "price": "280.00",
+   "file": "downloads/Toblerone_Dark_Chocolate.webp",
+   "tags": "Okay",
+   "category": 6,
+   "brand": 3,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-08-22T18:44:24.801Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 41,
+  "fields": {
+   "name": "Toblerone White Chocolate",
+   "description": "Toblerone White Chocolate is a luxurious twist on the classic Swiss favorite, featuring creamy white chocolate infused with honey and crunchy almond nougat. Its signature triangular peaks echo the rugged silhouette of the Matterhorn in the Swiss Alps, providing not just a taste treat but a visual one too. Each bite delivers a rich, velvety texture with subtle honey sweetness and nutty crunch that together elevate the overall experience.",
+   "image": "chocolates/Toblerone_White_Chocolate.webp",
+   "price": "240.00",
+   "file": "downloads/Toblerone_White_Chocolate.webp",
+   "tags": "Okay",
+   "category": 5,
+   "brand": 3,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-08-22T18:45:36.708Z"
+  }
+ },
+ {
+  "model": "store.chocolate",
+  "pk": 42,
+  "fields": {
+   "name": "Toblerone Fruit and Nut",
+   "description": "Toblerone Fruit & Nut is a Swiss chocolate bar that blends creamy milk chocolate with honey and almond nougat, enriched with juicy raisins for a sweet and chewy twist. Its iconic triangular peaks, inspired by the Swiss Alps, offer a unique combination of crunchy nuts and fruity bursts, making it a delightful variation of the classic Toblerone experience.",
+   "image": "chocolates/Toblerone_Fruit__Nut_Chocolate.jpg",
+   "price": "250.00",
+   "file": "downloads/Toblerone_Fruit__Nut_Chocolate.jpg",
+   "tags": "Okay",
+   "category": 4,
+   "brand": 3,
+   "rating": 0.0,
+   "total_ratings": 0,
+   "total_sales": 0,
+   "created_at": "2025-08-22T18:47:18.216Z"
+  }
+ },
+ {
+  "model": "store.coupon",
+  "pk": 2,
+  "fields": {
+   "code": "SWEETBIRTHDAY",
+   "description": "25% OFF on your birthday only",
+   "discount_type": "percentage",
+   "discount_value": "25.00",
+   "minimum_order_amount": "0.00",
+   "maximum_discount_amount": null,
+   "usage_limit": null,
+   "used_count": 0,
+   "is_active": true,
+   "valid_from": "2025-08-10T23:37:27.851Z",
+   "valid_until": "2026-08-10T23:37:27.851Z",
+   "created_by": 1,
+   "created_at": "2025-08-10T23:36:46.167Z",
+   "updated_at": "2025-08-10T23:37:27.858Z"
+  }
+ },
+ {
+  "model": "store.coupon",
+  "pk": 3,
+  "fields": {
+   "code": "WELCOME10",
+   "description": "10% OFF on first purchase",
+   "discount_type": "percentage",
+   "discount_value": "10.00",
+   "minimum_order_amount": "0.00",
+   "maximum_discount_amount": null,
+   "usage_limit": 1,
+   "used_count": 0,
+   "is_active": true,
+   "valid_from": "2025-08-10T23:37:27.851Z",
+   "valid_until": "2026-08-10T23:37:27.851Z",
+   "created_by": 1,
+   "created_at": "2025-08-10T23:36:46.173Z",
+   "updated_at": "2025-08-10T23:37:27.867Z"
+  }
+ },
+ {
+  "model": "store.coupon",
+  "pk": 4,
+  "fields": {
+   "code": "FREESHIP",
+   "description": "Free shipping on orders ≥ ₹1000",
+   "discount_type": "percentage",
+   "discount_value": "0.00",
+   "minimum_order_amount": "1000.00",
+   "maximum_discount_amount": null,
+   "usage_limit": null,
+   "used_count": 0,
+   "is_active": true,
+   "valid_from": "2025-08-10T23:37:27.851Z",
+   "valid_until": "2026-08-10T23:37:27.851Z",
+   "created_by": 1,
+   "created_at": "2025-08-10T23:36:46.177Z",
+   "updated_at": "2025-08-10T23:37:27.870Z"
+  }
+ },
+ {
+  "model": "store.coupon",
+  "pk": 5,
+  "fields": {
+   "code": "CHOCOLATEISLIFE",
+   "description": "5% OFF for chocolate lovers (anytime)",
+   "discount_type": "percentage",
+   "discount_value": "5.00",
+   "minimum_order_amount": "0.00",
+   "maximum_discount_amount": null,
+   "usage_limit": null,
+   "used_count": 8,
+   "is_active": true,
+   "valid_from": "2025-08-10T23:37:27.851Z",
+   "valid_until": "2026-08-10T23:37:27.851Z",
+   "created_by": 1,
+   "created_at": "2025-08-10T23:36:46.180Z",
+   "updated_at": "2025-08-26T04:58:06.118Z"
+  }
+ },
+ {
+  "model": "store.coupon",
+  "pk": 6,
+  "fields": {
+   "code": "MIDNIGHTMUNCH",
+   "description": "10% OFF for orders between 10 PM – 2 AM",
+   "discount_type": "percentage",
+   "discount_value": "10.00",
+   "minimum_order_amount": "0.00",
+   "maximum_discount_amount": null,
+   "usage_limit": null,
+   "used_count": 0,
+   "is_active": true,
+   "valid_from": "2025-08-10T23:37:27.851Z",
+   "valid_until": "2026-08-10T23:37:27.851Z",
+   "created_by": 1,
+   "created_at": "2025-08-10T23:36:46.184Z",
+   "updated_at": "2025-08-10T23:37:27.877Z"
+  }
+ },
+ {
+  "model": "vendor.brand",
+  "pk": 1,
+  "fields": {
+   "name": "GourmetGrove",
+   "description": "",
+   "created_at": "2025-08-15T19:40:20.095Z",
+   "updated_at": "2025-08-15T19:40:20.095Z"
+  }
+ },
+ {
+  "model": "vendor.vendor",
+  "pk": 1,
+  "fields": {
+   "name": "Siddharth Chauhan",
+   "contact_email": "shree.traders@example.com",
+   "phone_number": "+919824567321",
+   "gst_no": "24ABCDE1234F1Z5",
+   "address": "102 Market Road, Vapi",
+   "state": "Gujarat",
+   "is_active": true,
+   "created_at": "2025-08-15T19:52:27.704Z",
+   "updated_at": "2025-08-15T20:23:15.787Z"
+  }
+ },
+ {
+  "model": "vendor.vendor",
+  "pk": 2,
+  "fields": {
+   "name": "Rohit Bansal",
+   "contact_email": "mahalakshmi.suppliers@example.com",
+   "phone_number": "+919820134567",
+   "gst_no": "27BCDEF2345G1Z6",
+   "address": "TCET, A-Block, Gate No 5, Thakur Educational Campus, Thakur Rd, Thakur Village, Kandivali East, Mumbai, Maharashtra 400101",
+   "state": "Maharashtra",
+   "is_active": true,
+   "created_at": "2025-08-15T19:53:01.343Z",
+   "updated_at": "2025-08-15T20:22:45.842Z"
+  }
+ },
+ {
+  "model": "vendor.vendor",
+  "pk": 3,
+  "fields": {
+   "name": "Vivek Rath",
+   "contact_email": "rajputana.wholesale@example.com",
+   "phone_number": "+919892341256",
+   "gst_no": "08CDEFG3456H1Z7",
+   "address": "21 Johari Bazaar, Jaipur",
+   "state": "Rajasthan",
+   "is_active": true,
+   "created_at": "2025-08-15T19:53:32.524Z",
+   "updated_at": "2025-08-15T20:23:07.216Z"
+  }
+ },
+ {
+  "model": "vendor.vendor",
+  "pk": 4,
+  "fields": {
+   "name": "Karan Mehta",
+   "contact_email": "nammakfoods@example.com",
+   "phone_number": "+919845623178",
+   "gst_no": "29DEFGH4567I1Z8",
+   "address": "78 MG Road, Bengaluru",
+   "state": "Karnataka",
+   "is_active": true,
+   "created_at": "2025-08-15T19:54:05.433Z",
+   "updated_at": "2025-08-15T20:22:56.993Z"
+  }
+ },
+ {
+  "model": "vendor.vendor",
+  "pk": 5,
+  "fields": {
+   "name": "Amit Deshmukh",
+   "contact_email": "capitalcity.dist@example.com",
+   "phone_number": "+919811234567",
+   "gst_no": "07EFGHI5678J1Z9",
+   "address": "12 Connaught Place, New Delhi",
+   "state": "Delhi",
+   "is_active": true,
+   "created_at": "2025-08-15T19:54:32.380Z",
+   "updated_at": "2025-08-15T20:39:56.301Z"
+  }
+ },
+ {
+  "model": "vendor.vendorstore",
+  "pk": 1,
+  "fields": {
+   "vendor": 5,
+   "name": "Shree Traders",
+   "address": "Shree Traders, Shop No. 12, Main Market Road, Vapi, Gujarat 396191",
+   "phone_number": "919824567321",
+   "contact_email": "shree.traders@example.com",
+   "city": null,
+   "state": null,
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-15T20:23:56.232Z",
+   "updated_at": "2025-08-15T20:23:56.232Z"
+  }
+ },
+ {
+  "model": "vendor.vendorstore",
+  "pk": 2,
+  "fields": {
+   "vendor": 2,
+   "name": "Mahalakshmi Suppliers",
+   "address": "Mahalakshmi Suppliers, 45 Lalbaug Street, Byculla, Mumbai, Maharashtra 400027",
+   "phone_number": "919820134567",
+   "contact_email": "mahalakshmi.suppliers@example.com",
+   "city": null,
+   "state": null,
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-15T20:25:06.479Z",
+   "updated_at": "2025-08-15T20:25:06.479Z"
+  }
+ },
+ {
+  "model": "vendor.vendorstore",
+  "pk": 3,
+  "fields": {
+   "vendor": 4,
+   "name": "Rajputana Wholesalers",
+   "address": "Rajputana Wholesalers, 21 Johari Bazaar, Pink City, Jaipur, Rajasthan 302003",
+   "phone_number": "+919892341256",
+   "contact_email": "rajputana.wholesale@example.com",
+   "city": null,
+   "state": null,
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-15T20:25:36.416Z",
+   "updated_at": "2025-08-15T20:25:36.416Z"
+  }
+ },
+ {
+  "model": "vendor.vendorstore",
+  "pk": 4,
+  "fields": {
+   "vendor": 1,
+   "name": "Namma Karnataka Foods",
+   "address": "Namma Karnataka Foods, 78 MG Road, Brigade Road Junction, Bengaluru, Karnataka 560001",
+   "phone_number": "919845623178",
+   "contact_email": "nammakfoods@example.com",
+   "city": null,
+   "state": null,
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-15T20:26:45.927Z",
+   "updated_at": "2025-08-15T20:26:45.927Z"
+  }
+ },
+ {
+  "model": "vendor.vendorstore",
+  "pk": 5,
+  "fields": {
+   "vendor": 3,
+   "name": "Capital City Distributors",
+   "address": "Capital City Distributors, 12 Connaught Place, Block B, New Delhi 110001",
+   "phone_number": "919811234567",
+   "contact_email": "capitalcity.dist@example.com",
+   "city": null,
+   "state": null,
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-15T20:27:13.862Z",
+   "updated_at": "2025-08-15T20:27:13.862Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 13,
+  "fields": {
+   "vendor": 5,
+   "brand": null,
+   "chocolate": 1,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:28:53.374Z",
+   "updated_at": "2025-08-25T20:28:53.374Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 14,
+  "fields": {
+   "vendor": 5,
+   "brand": null,
+   "chocolate": 2,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:28:56.818Z",
+   "updated_at": "2025-08-25T20:28:56.818Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 15,
+  "fields": {
+   "vendor": 5,
+   "brand": null,
+   "chocolate": 3,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:29:03.365Z",
+   "updated_at": "2025-08-25T20:29:03.365Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 16,
+  "fields": {
+   "vendor": 5,
+   "brand": null,
+   "chocolate": 4,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:29:08.019Z",
+   "updated_at": "2025-08-25T20:29:08.019Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 17,
+  "fields": {
+   "vendor": 5,
+   "brand": null,
+   "chocolate": 5,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:29:12.435Z",
+   "updated_at": "2025-08-25T20:29:12.435Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 18,
+  "fields": {
+   "vendor": 5,
+   "brand": null,
+   "chocolate": 6,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:29:17.374Z",
+   "updated_at": "2025-08-25T20:29:17.374Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 19,
+  "fields": {
+   "vendor": 5,
+   "brand": null,
+   "chocolate": 7,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:29:25.625Z",
+   "updated_at": "2025-08-25T20:29:25.625Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 20,
+  "fields": {
+   "vendor": 5,
+   "brand": null,
+   "chocolate": 8,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:29:39.850Z",
+   "updated_at": "2025-08-25T20:29:39.850Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 21,
+  "fields": {
+   "vendor": 4,
+   "brand": null,
+   "chocolate": 9,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:30:04.514Z",
+   "updated_at": "2025-08-25T20:30:04.514Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 23,
+  "fields": {
+   "vendor": 4,
+   "brand": null,
+   "chocolate": 10,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:31:37.322Z",
+   "updated_at": "2025-08-25T20:31:37.322Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 24,
+  "fields": {
+   "vendor": 4,
+   "brand": null,
+   "chocolate": 11,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:31:54.166Z",
+   "updated_at": "2025-08-25T20:31:54.166Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 25,
+  "fields": {
+   "vendor": 4,
+   "brand": null,
+   "chocolate": 12,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:33:14.031Z",
+   "updated_at": "2025-08-25T20:33:14.031Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 26,
+  "fields": {
+   "vendor": 4,
+   "brand": null,
+   "chocolate": 13,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:33:35.989Z",
+   "updated_at": "2025-08-25T20:33:35.989Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 27,
+  "fields": {
+   "vendor": 4,
+   "brand": null,
+   "chocolate": 14,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:35:04.034Z",
+   "updated_at": "2025-08-25T20:35:04.034Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 28,
+  "fields": {
+   "vendor": 4,
+   "brand": null,
+   "chocolate": 15,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:35:39.659Z",
+   "updated_at": "2025-08-25T20:35:39.659Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 29,
+  "fields": {
+   "vendor": 4,
+   "brand": null,
+   "chocolate": 16,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:35:50.764Z",
+   "updated_at": "2025-08-25T20:35:50.764Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 30,
+  "fields": {
+   "vendor": 2,
+   "brand": null,
+   "chocolate": 17,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:36:02.178Z",
+   "updated_at": "2025-08-25T20:36:02.178Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 31,
+  "fields": {
+   "vendor": 2,
+   "brand": null,
+   "chocolate": 18,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:36:10.567Z",
+   "updated_at": "2025-08-25T20:36:10.567Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 32,
+  "fields": {
+   "vendor": 2,
+   "brand": null,
+   "chocolate": 19,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:36:25.940Z",
+   "updated_at": "2025-08-25T20:36:25.940Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 33,
+  "fields": {
+   "vendor": 2,
+   "brand": null,
+   "chocolate": 20,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:37:21.704Z",
+   "updated_at": "2025-08-25T20:37:21.704Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 34,
+  "fields": {
+   "vendor": 2,
+   "brand": null,
+   "chocolate": 21,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:37:29.320Z",
+   "updated_at": "2025-08-25T20:37:29.320Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 35,
+  "fields": {
+   "vendor": 2,
+   "brand": null,
+   "chocolate": 22,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:37:38.268Z",
+   "updated_at": "2025-08-25T20:37:38.268Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 36,
+  "fields": {
+   "vendor": 2,
+   "brand": null,
+   "chocolate": 23,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:37:54.768Z",
+   "updated_at": "2025-08-25T20:37:54.768Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 37,
+  "fields": {
+   "vendor": 2,
+   "brand": null,
+   "chocolate": 24,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:38:23.083Z",
+   "updated_at": "2025-08-25T20:38:23.083Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 38,
+  "fields": {
+   "vendor": 1,
+   "brand": null,
+   "chocolate": 25,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:39:22.629Z",
+   "updated_at": "2025-08-25T20:39:22.629Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 39,
+  "fields": {
+   "vendor": 1,
+   "brand": null,
+   "chocolate": 27,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:39:31.830Z",
+   "updated_at": "2025-08-25T20:39:31.830Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 40,
+  "fields": {
+   "vendor": 1,
+   "brand": null,
+   "chocolate": 28,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:40:24.174Z",
+   "updated_at": "2025-08-25T20:40:24.174Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 41,
+  "fields": {
+   "vendor": 1,
+   "brand": null,
+   "chocolate": 29,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:42:47.414Z",
+   "updated_at": "2025-08-25T20:42:47.414Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 42,
+  "fields": {
+   "vendor": 1,
+   "brand": null,
+   "chocolate": 31,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:43:44.531Z",
+   "updated_at": "2025-08-25T20:43:44.531Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 43,
+  "fields": {
+   "vendor": 1,
+   "brand": null,
+   "chocolate": 32,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:45:59.456Z",
+   "updated_at": "2025-08-25T20:45:59.456Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 44,
+  "fields": {
+   "vendor": 1,
+   "brand": null,
+   "chocolate": 33,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:46:08.509Z",
+   "updated_at": "2025-08-25T20:46:08.509Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 45,
+  "fields": {
+   "vendor": 1,
+   "brand": null,
+   "chocolate": 34,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:46:17.733Z",
+   "updated_at": "2025-08-25T20:46:17.733Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 46,
+  "fields": {
+   "vendor": 3,
+   "brand": null,
+   "chocolate": 36,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:46:30.416Z",
+   "updated_at": "2025-08-25T20:46:30.416Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 47,
+  "fields": {
+   "vendor": 3,
+   "brand": null,
+   "chocolate": 37,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:46:41.008Z",
+   "updated_at": "2025-08-25T20:46:41.008Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 48,
+  "fields": {
+   "vendor": 3,
+   "brand": null,
+   "chocolate": 38,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:46:49.504Z",
+   "updated_at": "2025-08-25T20:46:49.504Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 49,
+  "fields": {
+   "vendor": 3,
+   "brand": null,
+   "chocolate": 39,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:46:56.853Z",
+   "updated_at": "2025-08-25T20:46:56.853Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 50,
+  "fields": {
+   "vendor": 3,
+   "brand": null,
+   "chocolate": 40,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:47:04.469Z",
+   "updated_at": "2025-08-25T20:47:04.469Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 51,
+  "fields": {
+   "vendor": 3,
+   "brand": null,
+   "chocolate": 41,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:47:17.709Z",
+   "updated_at": "2025-08-25T20:47:17.709Z"
+  }
+ },
+ {
+  "model": "vendor.vendorproduct",
+  "pk": 52,
+  "fields": {
+   "vendor": 3,
+   "brand": null,
+   "chocolate": 42,
+   "sku": null,
+   "cost_price": "0.00",
+   "is_active": true,
+   "created_at": "2025-08-25T20:47:25.097Z",
+   "updated_at": "2025-08-25T20:47:25.097Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 1,
+  "fields": {
+   "name": "Infinity Mall",
+   "phone_number": "8452991546",
+   "address": "Infiniti Mall Malad, Malad, Mindspace, Malad West, Mumbai, Maharashtra 400064",
+   "city": "Mumbai",
+   "state": "Maharashtra",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:21:49.357Z",
+   "updated_at": "2025-08-11T04:31:53.981Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 2,
+  "fields": {
+   "name": "Jio World Drive",
+   "phone_number": "+91 22 3570 8999",
+   "address": "Ground Floor, South Sky, Jio World Drive, Bandra Kurla Complex (BKC), Bandra East, Mumbai – 400051, Maharashtra, India",
+   "city": "Mumbai",
+   "state": "Maharashtra",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:34:19.042Z",
+   "updated_at": "2025-08-11T04:34:19.042Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 3,
+  "fields": {
+   "name": "Phoenix Palladium Mall",
+   "phone_number": "+91 22 4333 9994",
+   "address": "462, Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400013, India",
+   "city": "Mumbai",
+   "state": "Maharashtra",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:35:11.560Z",
+   "updated_at": "2025-08-11T04:35:11.560Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 4,
+  "fields": {
+   "name": "Galaxy High Street",
+   "phone_number": "+91 78747 18111",
+   "address": "NH 8, Koparli Road, GIDC Housing Board Colony, Vapi East, GIDC, Vapi – 396195, Gujarat, India",
+   "city": "Vapi",
+   "state": "Gujarat",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:39:30.899Z",
+   "updated_at": "2025-08-11T04:39:30.899Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 5,
+  "fields": {
+   "name": "Central Bazzar",
+   "phone_number": "+91 80005 54444",
+   "address": "Opp. Stop & Go, Dabhel Check Post, Chala Dungar Falia Road, Atiyawad, Dabhel, Vapi – 396215, Gujarat, India",
+   "city": "Vapi",
+   "state": "Gujarat",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:40:11.308Z",
+   "updated_at": "2025-08-11T04:40:11.308Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 6,
+  "fields": {
+   "name": "V2 Signature",
+   "phone_number": "+91 81400 01888",
+   "address": "Plot No. 373, Opp. PMC Bank, Daman Road, Chala (near Primary School), Vapi – 396191, Gujarat, India",
+   "city": "Vapi",
+   "state": "Gujarat",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:40:46.895Z",
+   "updated_at": "2025-08-11T04:40:46.895Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 7,
+  "fields": {
+   "name": "DLF Promenade",
+   "phone_number": "+91 11 4610 4466",
+   "address": "Address: 3 Nelson Mandela Marg, Vasant Kunj II, Vasant Kunj, New Delhi, Delhi 110070, India",
+   "city": "Vasant Kunj",
+   "state": "Delhi",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:43:20.889Z",
+   "updated_at": "2025-08-11T04:43:20.889Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 8,
+  "fields": {
+   "name": "Nexus Select CITYWALK",
+   "phone_number": "+91 11 4211 4200",
+   "address": "Saket District Centre, Sector 6 (Pushp Vihar), Saket District Centre, New Delhi, Delhi 110017, India",
+   "city": "Saket",
+   "state": "Delhi",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:48:07.147Z",
+   "updated_at": "2025-08-11T04:48:07.147Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 9,
+  "fields": {
+   "name": "Pacific Mall Tagore Garden",
+   "phone_number": "+91 99533 99833",
+   "address": "Najafgarh Road, Tagore Garden, Tilak Nagar, New Delhi, Delhi 110018, India",
+   "city": "Dwarka",
+   "state": "Delhi",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:49:46.460Z",
+   "updated_at": "2025-08-11T04:49:46.460Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 10,
+  "fields": {
+   "name": "World Trade Park",
+   "phone_number": "+91 141 272 8044",
+   "address": "Jawahar Lal Nehru Marg, Malviya Nagar, Jaipur, Rajasthan 302017, India",
+   "city": "Jaipur",
+   "state": "Rajasthan",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:52:52.825Z",
+   "updated_at": "2025-08-11T04:52:52.825Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 11,
+  "fields": {
+   "name": "MGF Metropolitan Mall",
+   "phone_number": "+91 141 391 0888",
+   "address": "22 Godam Circle, near Neelkanth Building, Opposite Sahkar Bhawan, C-Scheme, Jaipur 302019, Rajasthan, India",
+   "city": "Jaipur",
+   "state": "Rajasthan",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:53:32.646Z",
+   "updated_at": "2025-08-11T04:53:32.646Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 12,
+  "fields": {
+   "name": "Triton Mega Mall",
+   "phone_number": "+91 141 515 6792",
+   "address": "Chomu Pulia Circle, Jhotwara Road (near Jhotwara Over Bridge), Jaipur 302012, Rajasthan, India",
+   "city": "Jaipur",
+   "state": "Rajasthan",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:54:00.749Z",
+   "updated_at": "2025-08-11T04:54:00.749Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 13,
+  "fields": {
+   "name": "Phoenix Marketcity",
+   "phone_number": "+91 80 4962 6111",
+   "address": "Whitefield Main Road, Devasandra Industrial Estate, Mahadevapura, Bengaluru, Karnataka 560048",
+   "city": "Bengaluru (Whitefield)",
+   "state": "Karnataka",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T04:55:33.215Z",
+   "updated_at": "2025-08-11T04:59:21.830Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 14,
+  "fields": {
+   "name": "Mantri Square Mall",
+   "phone_number": "+91 80 3016 0000",
+   "address": "1, Sampige Road, Malleshwaram, Bengaluru, Karnataka 560003",
+   "city": "Bengaluru (Malleswaram)",
+   "state": "Karnataka",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T05:04:50.092Z",
+   "updated_at": "2025-08-11T05:04:50.092Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storelocation",
+  "pk": 15,
+  "fields": {
+   "name": "Nexus Centre City Mall",
+   "phone_number": "+918457963525",
+   "address": "Nexus Centre City, No. 8 & N-5, Hyder Ali Road, Nazarbad Mohalla, Mysuru – 570010, Karnataka",
+   "city": "Mysuru",
+   "state": "Karnataka",
+   "country": "India",
+   "is_active": true,
+   "created_at": "2025-08-11T05:06:14.004Z",
+   "updated_at": "2025-08-11T05:06:14.004Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 1,
+  "fields": {
+   "store": 5,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:57:43.378Z",
+   "updated_at": "2025-08-25T20:57:43.378Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 2,
+  "fields": {
+   "store": 7,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:58:02.047Z",
+   "updated_at": "2025-08-25T20:58:02.047Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 3,
+  "fields": {
+   "store": 4,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:58:15.435Z",
+   "updated_at": "2025-08-25T20:58:15.435Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 4,
+  "fields": {
+   "store": 1,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:58:41.046Z",
+   "updated_at": "2025-08-25T20:58:41.046Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 5,
+  "fields": {
+   "store": 2,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:58:52.035Z",
+   "updated_at": "2025-08-25T20:58:52.035Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 6,
+  "fields": {
+   "store": 11,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:59:05.387Z",
+   "updated_at": "2025-08-25T20:59:05.387Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 7,
+  "fields": {
+   "store": 14,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:59:21.360Z",
+   "updated_at": "2025-08-25T20:59:21.360Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 8,
+  "fields": {
+   "store": 15,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:59:27.789Z",
+   "updated_at": "2025-08-25T20:59:27.789Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 9,
+  "fields": {
+   "store": 8,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:59:36.285Z",
+   "updated_at": "2025-08-25T20:59:36.285Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 10,
+  "fields": {
+   "store": 9,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:59:45.068Z",
+   "updated_at": "2025-08-25T20:59:45.068Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 11,
+  "fields": {
+   "store": 13,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:59:51.093Z",
+   "updated_at": "2025-08-25T20:59:51.093Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 12,
+  "fields": {
+   "store": 3,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T20:59:57.210Z",
+   "updated_at": "2025-08-25T20:59:57.210Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 13,
+  "fields": {
+   "store": 12,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T21:00:06.821Z",
+   "updated_at": "2025-08-25T21:00:06.821Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 14,
+  "fields": {
+   "store": 6,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T21:00:13.093Z",
+   "updated_at": "2025-08-25T21:00:13.093Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagelocation",
+  "pk": 15,
+  "fields": {
+   "store": 10,
+   "name": "Backroom",
+   "description": "Cold Storage",
+   "is_active": true,
+   "created_at": "2025-08-25T21:00:19.984Z",
+   "updated_at": "2025-08-25T21:00:19.984Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 1,
+  "fields": {
+   "item": 1,
+   "storage_location": 1,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:01:12.379Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 2,
+  "fields": {
+   "item": 2,
+   "storage_location": 1,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:01:30.918Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 3,
+  "fields": {
+   "item": 3,
+   "storage_location": 1,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:02:23.661Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 4,
+  "fields": {
+   "item": 4,
+   "storage_location": 2,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:03:06.554Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 5,
+  "fields": {
+   "item": 5,
+   "storage_location": 2,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:03:39.963Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 6,
+  "fields": {
+   "item": 6,
+   "storage_location": 2,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:03:31.718Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 7,
+  "fields": {
+   "item": 7,
+   "storage_location": 3,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:03:25.156Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 8,
+  "fields": {
+   "item": 8,
+   "storage_location": 3,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:04:00.276Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 9,
+  "fields": {
+   "item": 9,
+   "storage_location": 3,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:04:35.701Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 10,
+  "fields": {
+   "item": 10,
+   "storage_location": 4,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:34.206Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 11,
+  "fields": {
+   "item": 11,
+   "storage_location": 4,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:19:14.142Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 12,
+  "fields": {
+   "item": 12,
+   "storage_location": 4,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:19:09.998Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 13,
+  "fields": {
+   "item": 13,
+   "storage_location": 5,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:19:06.005Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 14,
+  "fields": {
+   "item": 14,
+   "storage_location": 5,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:38.269Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 15,
+  "fields": {
+   "item": 15,
+   "storage_location": 5,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:19:01.995Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 16,
+  "fields": {
+   "item": 16,
+   "storage_location": 6,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:03.301Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 17,
+  "fields": {
+   "item": 17,
+   "storage_location": 6,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:52.606Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 18,
+  "fields": {
+   "item": 18,
+   "storage_location": 6,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:54.142Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 19,
+  "fields": {
+   "item": 19,
+   "storage_location": 7,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:24.966Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 20,
+  "fields": {
+   "item": 20,
+   "storage_location": 7,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:09.848Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 21,
+  "fields": {
+   "item": 21,
+   "storage_location": 7,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:13.301Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 22,
+  "fields": {
+   "item": 22,
+   "storage_location": 8,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:56.803Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 23,
+  "fields": {
+   "item": 23,
+   "storage_location": 8,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:46.070Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 24,
+  "fields": {
+   "item": 24,
+   "storage_location": 8,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:45.755Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 25,
+  "fields": {
+   "item": 25,
+   "storage_location": 9,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:38.454Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 26,
+  "fields": {
+   "item": 27,
+   "storage_location": 9,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:50.340Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 27,
+  "fields": {
+   "item": 28,
+   "storage_location": 9,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:41.488Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 28,
+  "fields": {
+   "item": 29,
+   "storage_location": 10,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:06.691Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 29,
+  "fields": {
+   "item": 31,
+   "storage_location": 10,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:17.269Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 30,
+  "fields": {
+   "item": 32,
+   "storage_location": 10,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:20.484Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 31,
+  "fields": {
+   "item": 33,
+   "storage_location": 11,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:59.814Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 32,
+  "fields": {
+   "item": 34,
+   "storage_location": 11,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:58.206Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 33,
+  "fields": {
+   "item": 36,
+   "storage_location": 11,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:28.556Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 34,
+  "fields": {
+   "item": 37,
+   "storage_location": 13,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:42.116Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 35,
+  "fields": {
+   "item": 38,
+   "storage_location": 13,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:18:34.638Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 36,
+  "fields": {
+   "item": 39,
+   "storage_location": 14,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:31.378Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 37,
+  "fields": {
+   "item": 40,
+   "storage_location": 14,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:28.037Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 38,
+  "fields": {
+   "item": 42,
+   "storage_location": 15,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:24.238Z"
+  }
+ },
+ {
+  "model": "stock_and_location.storagequantity",
+  "pk": 39,
+  "fields": {
+   "item": 41,
+   "storage_location": 15,
+   "quantity": 500,
+   "last_updated": "2025-08-25T21:17:17.837Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 1,
+  "fields": {
+   "number": "GJ 01 AB 4598",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:39:54.528Z",
+   "updated_at": "2025-08-15T18:39:54.528Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 2,
+  "fields": {
+   "number": "GJ 05 CN 8324",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:07.151Z",
+   "updated_at": "2025-08-15T18:40:07.151Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 3,
+  "fields": {
+   "number": "GJ 18 QT 6245",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:11.726Z",
+   "updated_at": "2025-08-15T18:40:11.726Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 4,
+  "fields": {
+   "number": "MH 12 ZX 2384",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:16.969Z",
+   "updated_at": "2025-08-15T18:40:16.969Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 5,
+  "fields": {
+   "number": "MH 14 PL 6542",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:25.193Z",
+   "updated_at": "2025-08-15T18:40:25.193Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 6,
+  "fields": {
+   "number": "MH 01 DR 9125",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:29.965Z",
+   "updated_at": "2025-08-15T18:40:29.965Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 7,
+  "fields": {
+   "number": "RJ 14 MF 7482",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:34.313Z",
+   "updated_at": "2025-08-15T18:40:34.313Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 8,
+  "fields": {
+   "number": "RJ 27 BM 5362",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:39.013Z",
+   "updated_at": "2025-08-15T18:40:39.013Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 9,
+  "fields": {
+   "number": "RJ 09 TR 8294",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:43.353Z",
+   "updated_at": "2025-08-15T18:40:43.353Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 10,
+  "fields": {
+   "number": "KA 01 XP 4725",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:47.554Z",
+   "updated_at": "2025-08-15T18:40:47.554Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 11,
+  "fields": {
+   "number": "KA 03 CN 9834",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:52.199Z",
+   "updated_at": "2025-08-15T18:40:52.199Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 12,
+  "fields": {
+   "number": "KA 05 GY 7642",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:40:56.290Z",
+   "updated_at": "2025-08-15T18:40:56.290Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 13,
+  "fields": {
+   "number": "DL 05 AB 4932",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:41:01.153Z",
+   "updated_at": "2025-08-15T18:41:01.153Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 14,
+  "fields": {
+   "number": "DL 08 PL 7483",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:41:06.490Z",
+   "updated_at": "2025-08-15T18:41:06.490Z"
+  }
+ },
+ {
+  "model": "delivery.vehicle",
+  "pk": 15,
+  "fields": {
+   "number": "DL 01 DR 8251",
+   "vehicle_type": "bike",
+   "is_active": true,
+   "notes": "",
+   "created_at": "2025-08-15T18:41:10.621Z",
+   "updated_at": "2025-08-15T18:41:10.621Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 1,
+  "fields": {
+   "name": "Rajesh Patel",
+   "phone_number": "+919825341765",
+   "email": "rajesh.patel87@example.com",
+   "username": "Rajesh",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 1,
+   "store_location": 5,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T18:57:47.032Z",
+   "updated_at": "2025-08-15T18:57:47.032Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 2,
+  "fields": {
+   "name": "Kunal Desai",
+   "phone_number": "+919725341890",
+   "email": "kunal.desai26@example.com",
+   "username": "Kunal",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 2,
+   "store_location": 4,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T18:58:37.441Z",
+   "updated_at": "2025-08-15T18:58:37.441Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 3,
+  "fields": {
+   "name": "Manish Shah",
+   "phone_number": "+919898743251",
+   "email": "manish.shah43@example.com",
+   "username": "Manish",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 3,
+   "store_location": 6,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T18:59:24.035Z",
+   "updated_at": "2025-08-15T18:59:24.035Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 4,
+  "fields": {
+   "name": "Rohit More",
+   "phone_number": "+919930785412",
+   "email": "rohit.more92@example.com",
+   "username": "Rohit",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 4,
+   "store_location": 1,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:00:05.215Z",
+   "updated_at": "2025-08-15T19:00:05.215Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 5,
+  "fields": {
+   "name": "Ajay Kulkarni",
+   "phone_number": "+919821456730",
+   "email": "ajay.kulkarni38@example.com",
+   "username": "Ajay",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 5,
+   "store_location": 2,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:00:46.501Z",
+   "updated_at": "2025-08-15T19:00:46.501Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 6,
+  "fields": {
+   "name": "Sameer Joshi",
+   "phone_number": "+919867541230",
+   "email": "sameer.joshi55@example.com",
+   "username": "Samee",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 6,
+   "store_location": 3,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:01:35.903Z",
+   "updated_at": "2025-08-15T19:01:35.903Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 7,
+  "fields": {
+   "name": "Akash Sharma",
+   "phone_number": "+919929541873",
+   "email": "akash.sharma20@example.com",
+   "username": "Akash",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 8,
+   "store_location": 12,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:02:25.113Z",
+   "updated_at": "2025-08-15T19:02:25.113Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 8,
+  "fields": {
+   "name": "Suresh Singh",
+   "phone_number": "+919829023145",
+   "email": "suresh.singh71@example.com",
+   "username": "Suresh",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 7,
+   "store_location": 11,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:04:28.235Z",
+   "updated_at": "2025-08-15T19:04:28.235Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 9,
+  "fields": {
+   "name": "Rakesh Choudhary",
+   "phone_number": "+919982647310",
+   "email": "rakesh.choudhary64@example.com",
+   "username": "Rakesh",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 9,
+   "store_location": 10,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:05:07.739Z",
+   "updated_at": "2025-08-15T19:05:07.739Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 10,
+  "fields": {
+   "name": "Anil Kumar",
+   "phone_number": "+919845123067",
+   "email": "anil.kumar57@example.com",
+   "username": "Anil",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 10,
+   "store_location": 14,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:05:45.211Z",
+   "updated_at": "2025-08-15T19:05:45.211Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 11,
+  "fields": {
+   "name": "Manjunath Gowda",
+   "phone_number": "+919880456213",
+   "email": "manjunath.gowda31@example.com",
+   "username": "Manjunath",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 11,
+   "store_location": 15,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:06:52.538Z",
+   "updated_at": "2025-08-15T19:06:52.538Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 12,
+  "fields": {
+   "name": "Raghav Shetty",
+   "phone_number": "+919901458320",
+   "email": "raghav.shetty44@example.com",
+   "username": "Raghav",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 12,
+   "store_location": 13,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:07:28.146Z",
+   "updated_at": "2025-08-15T19:07:28.146Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 13,
+  "fields": {
+   "name": "Arjun Mehta",
+   "phone_number": "+919874563210",
+   "email": "arjun.mehta16@example.com",
+   "username": "Arjun",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 13,
+   "store_location": 7,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:07:57.438Z",
+   "updated_at": "2025-08-15T19:07:57.438Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 14,
+  "fields": {
+   "name": "Vikram Malhotra",
+   "phone_number": "+919998765432",
+   "email": "vikram.malhotra81@example.com",
+   "username": "Vikram",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 14,
+   "store_location": 8,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:08:35.720Z",
+   "updated_at": "2025-08-15T19:08:35.720Z"
+  }
+ },
+ {
+  "model": "delivery.deliveryagent",
+  "pk": 15,
+  "fields": {
+   "name": "Amit Khanna",
+   "phone_number": "+919812345670",
+   "email": "amit.khanna22@example.com",
+   "username": "Amit",
+   "is_active": true,
+   "is_available": true,
+   "assigned_vehicle": 15,
+   "store_location": 9,
+   "vehicle_number": null,
+   "notes": null,
+   "created_at": "2025-08-15T19:09:20.071Z",
+   "updated_at": "2025-08-15T19:09:20.071Z"
+  }
+ },
+ {
+  "model": "logistic.logisticspartner",
+  "pk": 1,
+  "fields": {
+   "name": "Amazon",
+   "contact_email": "logistics@amazon.in",
+   "phone_number": "1800-3000-9009",
+   "tracking_url_template": null,
+   "is_active": true,
+   "created_at": "2025-08-15T19:12:40.423Z",
+   "updated_at": "2025-08-15T19:12:40.423Z"
+  }
+ }
+]
